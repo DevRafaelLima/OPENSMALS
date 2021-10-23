@@ -1,0 +1,18 @@
+/*estilo personalizado do header*/
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.header .logo img{
+    height: 100px;
+}
+.menu { 
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+.menu .active {
+    background-color: #73bfb8;
+    border-radius: 5px;
+    color: #fff;
+}
