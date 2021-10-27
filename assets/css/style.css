@@ -50,3 +50,47 @@ body {
     border-radius: 10px;
     margin-top: 30px;
 }
+/*estratégias*/
+#estrategias{
+    text-align: center;
+    margin-top: 50px;
+}
+.br {
+    height: 10px;
+    max-width: 500px;
+    margin: auto;
+    background-color: #fec601;
+    margin-bottom: 50px;
+}
+#estrategias img {
+    width: 500px;
+}
+#estrategias .conteudo{
+    display: flex;
+    flex-direction: column;
+}
+#estrategias .conteudo h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+    color: #888;
+}
+#estrategias .conteudo p{
+    font-size: 18px;
+    color: #888;
+}
+.conteudoEstrategiasInfo {
+    text-align: left;
+}
+.conteudoEstrategiasInfo h4{
+    font-size: 15px;
+}
+.conteudoEstrategiasInfo a {
+    font-size: 13px;
+}
+
+/*footer*/
+footer {
+    background-color: black;
+    height: 50px;
+}
