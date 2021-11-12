@@ -6,9 +6,15 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    height: 80px;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
 }
 .header .logo img{
-    height: 100px;
+    /*height: 100px;*/
+    width: 100px;
 }
 .menu { 
     display: flex;
@@ -21,40 +27,55 @@ body {
     color: #fff;
 }
 /*topo*/
-.topo {
-    display: flex;
-    align-items: center;
-    height: calc(100vh - 100px);
-    background-color: #3da5d9;
-    color: #fff;
-}
-.topo .container{
-    height: 400px;
-}
-.topo .container img {
-    border-radius: 20px;
-}
-.topo .textoChamativo {
-    text-align: center;
+#carouselExampleIndicators {
+    height: calc(100vh - 80px);
     
 }
-.topo .textoChamativo h2 {
-    font-size: 20px;
-    margin-top: 15px;
+#slider1 {
+    background-image: url('../img/background1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
 }
-.topo .textoChamativo .button {
-    background-color: #fec601;
-    color: #fff;
-    display: block; 
-    font-size: 40px;   
-    border-radius: 10px;
-    margin-top: 30px;
+#carouselExampleIndicators .item-texto{
+    background-color: blanchedalmond;
+    display: flex;
+}
+#slider2 {
+    background-image: url('../img/background1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+#slider3 {
+    background-image: url('../img/background1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
 }
 /*estratégias*/
 #estrategias{
     text-align: center;
     margin-top: 50px;
+    background-position: center;
+    background-size: cover;
 }
+.topoInterno {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    align-items: center;
+}
+.topoInterno h1 {
+    font-weight: bold;
+    font-size: 4em;
+    color: #fec601;
+    margin: 0px 0px 50px 0px;
+}
+.topoInterno h2 {
+    font-size: 1.8em;
+}
+
 .br {
     height: 10px;
     max-width: 500px;
@@ -65,6 +86,11 @@ body {
 #estrategias img {
     width: 500px;
 }
+#estrategias h2{
+    color: #000;
+    font-size: bold;
+    padding-top: 20px;
+}
 #estrategias .conteudo{
     display: flex;
     flex-direction: column;
@@ -73,24 +99,151 @@ body {
     margin: 0;
     padding: 0;
     font-size: 23px;
-    color: #888;
+    font-weight: bold;
+    color: #000;
 }
 #estrategias .conteudo p{
     font-size: 18px;
-    color: #888;
+    color: #000;
 }
 .conteudoEstrategiasInfo {
     text-align: left;
 }
+.conteudoEstrategiasInfo ul {
+    color: #000;
+  
+}
 .conteudoEstrategiasInfo h4{
     font-size: 15px;
+    font-size: bold;
 }
 .conteudoEstrategiasInfo a {
     font-size: 13px;
 }
 
+/*estrategiaMomentoAprendizagem*/
+#estrategiaMomentoAprendizagem {
+    padding: 20px 0px 20px 0px;                                                                                                                                                                                     
+    background-image: url('../img/pexels-ivan-samkov-5676744.jpg');
+    background-position: center;
+    background-size: cover                                                                                                                                                                                                                                              ;
+}
+
+.areaMetodoConteudo {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.areaMetodoConteudo .item {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 3px solid #ccc;
+    padding: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.areaMetodoConteudo .item h4 {
+    font-size: 20px;
+    text-align: center;
+}
+.areaMetodoConteudo .item h5 {
+    font-size: 15px;
+    color: #888;
+}
+.areaMetodoConteudo .item p {
+    font-size: 12px;
+}
+/*depoimentos*/
+#depoimentos{
+    background-color: #F2F4F3;
+    
+}
+#depoimentos .img {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    float: left;
+    margin-right: 5px;
+}
+#depoimentos .img img {
+    width: 100%;
+    border-radius: 50%;
+}
+#depoimentos .depoimentoItem.background{
+    background-color: #ea7317;
+    color: #F2F4F3;
+    padding-top: 80px;
+}
+#depoimentos .depoimentoItem.background h4 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #F2F4F3;
+}
+#depoimentos .depoimentoItem.background p {
+    font-size: 15px;
+    color: #fff;
+}
+.depoimentoItem.item{
+    margin: 150px 0px 80px 0px;
+    text-align: justify;
+}
+/*pesquisadores*/
+#pesquisadores .item{
+    margin: 0px 0px 100px 0px;
+    color: #050505;
+}
+#pesquisadores .item .imagem{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 100px;
+    border: 5px solid #000;
+    margin-bottom: 5px;
+}
+#pesquisadores .item .imagem img {
+    width: 100%;
+    border-radius: 50%;
+}
+#pesquisadores .item h5 {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+#pesquisadores .item span{
+    font-size: 12px;
+}
+#pesquisadores .item .redesSocias {
+    display: flex;
+    justify-content: space-around;
+}
 /*footer*/
 footer {
     background-color: black;
-    height: 50px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 0.8em;
+}
+
+.w-100 {
+    margin-top: 20px;
+}
+/*Estilos padrões*/
+.TitlePadrao{
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+}
+.TitlePadrao h2{
+    font-size: 1.5em;
+}
+.TitlePadrao .br{
+    max-width: 50%;
 }

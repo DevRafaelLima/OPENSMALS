@@ -1,0 +1,23 @@
+.estrategiaTopo .areaInterna{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#escolhendoEstrategia .item .topo {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#escolhendoEstrategia .item .topo h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+#escolhendoEstrategia .item {
+    background-color: #e5e5e5;
+}
