@@ -1,0 +1,86 @@
+.topoAprendizagemSemelhantes{
+    height: calc(100vh - 80px);
+    display: flex;
+}
+.topoAprendizagemSemelhantes .texto {
+    flex: 1;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.topoAprendizagemSemelhantes .texto p {
+    color: rgb(86, 86, 201);
+    font-size: 1em;
+    font-weight: bold;
+}
+.topoAprendizagemSemelhantes .texto h1 {
+    color: #050505;
+    font-size: 2.5em;
+    padding: 0px 50px 0px 50px;
+    text-align: center;
+}
+.topoAprendizagemSemelhantes .imagem{
+    flex: 1;
+}
+.topoAprendizagemSemelhantes .imagem img{
+    height: 100%;
+    width: 100%;
+}
+#AprendizagemSemelhantes .areaItem {
+    width: 900px;
+    margin: auto;
+    display: flex;
+}
+#AprendizagemSemelhantes .areaItem .left {
+    width: 450px;
+    padding-left: 50px;
+    background-color: rgb(6,54,120);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+#AprendizagemSemelhantes .areaItem .left ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#AprendizagemSemelhantes .areaItem .left li {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+#AprendizagemSemelhantes .areaItem .left li a {
+    color: #fff;
+}
+#AprendizagemSemelhantes .areaItem .rigth {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+#AprendizagemSemelhantes .areaItem .rigth .conteudo{
+    margin-left: 50px;
+    color: #050505;
+}
+#AprendizagemSemelhantes .areaItem .rigth .imageItem {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+#AprendizagemSemelhantes .areaItem .rigth .imageItem img {
+    width: 100%;
+}
+#AprendizagemSemelhantes .fotos {
+
+}
+#AprendizagemSemelhantes .fotos .artefatosGerados{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#AprendizagemSemelhantes .fotos .artefatosGerados h2 {
+    font-size: 3em;
+}
