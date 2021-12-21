@@ -1,9 +1,4 @@
-.estrategiaTopo .areaInterna{
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 #escolhendoEstrategia .item .topo {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
