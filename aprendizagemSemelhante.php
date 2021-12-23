@@ -186,13 +186,13 @@
 
           <div class="container-fluid" style="margin: 0;padding: 0px;">
             <div class="informacoes">
-              <div class="info">
+              <div class="info padding-left padding-rigt">
                 <h3>Informações gerais sobre a (s) classe (s) avaliada (s)?</h3>
                 <p>As informações sobre a (s) classe (s) avaliada (s) podem ser visualizadas na tabela abaixo:</p>
 
               </div>
               
-              <table class="table" style="padding: 0px 50px;">
+              <table class="table">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">Univerdidade</th>

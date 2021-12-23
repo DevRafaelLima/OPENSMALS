@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendizagem baseada em problemas (PBL) adaptado</title>
+    <title>Problem Based Learning (PBL) Adapted</title>
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
      <!-- CSS3 estilizado-->
@@ -28,7 +28,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
         <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Aprendizagem baseada em problemas (PBL) adaptado</li>
+        <li class="breadcrumb-item active" aria-current="page">Problem Based Learning (PBL) Adapted</li>
       </ol>
    </nav>
    <hr>
@@ -36,7 +36,7 @@
    <!--Topo-->
     <div class="estrategiaTopo container-fluid">
         <div class="title-ensino">
-            <h1>Aprendizagem baseada em problemas (PBL) adaptado</h1>
+            <h1>Problem Based Learning (PBL) Adapted</h1>
         </div>
     </div>
       <!--fim topo-->

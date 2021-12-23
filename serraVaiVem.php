@@ -28,7 +28,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Página inicial</a></li>
         <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Serra de vaivém</li>
+        <li class="breadcrumb-item active" aria-current="page">Jigsaw</li>
       </ol>
    </nav>
    <hr>
@@ -36,7 +36,7 @@
    <!--Topo-->
     <div class="estrategiaTopo container-fluid">
         <div class="title-ensino">
-            <h1>Serra de vaivém</h1>
+            <h1>Jigsaw</h1>
         </div>
     </div>
       <!--fim topo-->

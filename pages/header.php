@@ -14,7 +14,7 @@
                       <div class="dropdown-content">
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="aprendizagemSemelhante.php">Aprendizagem baseada em sistemas semelhantes</a></div>
+                          <div class="droptbtnInt"><a href="aprendizagemSemelhante.php">Aprendizagem Baseada em Sistemas Familiares</a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>
@@ -23,7 +23,7 @@
                         <!--fim item-->
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="serraVaiVem.php">Serra de vaivém</a></div>
+                          <div class="droptbtnInt"><a href="serraVaiVem.php">Jigsaw</a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>
@@ -32,7 +32,7 @@
                         <!--fim item-->
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="exemplosErroneos.php">Aprendendo com exemplos errôneos</a></div>
+                          <div class="droptbtnInt"><a href="exemplosErroneos.php">Learning from Erroneous Examples</a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>
@@ -41,7 +41,7 @@
                         <!--fim item-->
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="estrategiaInspecao.php">Estratégia baseada em inspeção</a></div>
+                          <div class="droptbtnInt"><a href="estrategiaInspecao.php">Métodos de Aprendizagem utilizando dados de Inspeções</a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>
@@ -50,7 +50,7 @@
                         <!--fim item-->
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="abordagemMultimodal.php">Abordagem Multimodal</a></div>
+                          <div class="droptbtnInt"><a href="abordagemMultimodal.php">Multimodal Approach</a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>
@@ -59,7 +59,7 @@
                         <!--fim item-->
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="ExemplosNegativos.php">Exemplos Negativos</a></div>
+                          <div class="droptbtnInt"><a href="ExemplosNegativos.php">Negative Examples </a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>
@@ -68,7 +68,7 @@
                         <!--fim item-->
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="metodoEnsino.php">Método de ensino de trilha dupla PBL + LBL</a></div>
+                          <div class="droptbtnInt"><a href="metodoEnsino.php">PBL + LBL Double Track Teaching Method</a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>
@@ -77,7 +77,7 @@
                         <!--fim item-->
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="exemploPositivo.php">Exemplos positivos</a></div>
+                          <div class="droptbtnInt"><a href="exemploPositivo.php">Positive Examples</a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>
@@ -86,7 +86,7 @@
                         <!--fim item-->
                         <!--item-->
                         <div class="dropdownInt">
-                          <div class="droptbtnInt"><a href="aprendizagemProblemas.php">Aprendizagem baseada em problemas (PBL) adaptado</a></div>
+                          <div class="droptbtnInt"><a href="aprendizagemProblemas.php">Problem Based Learning (PBL) Adapted</a></div>
                           <div class="dropdown-content-int">
                               <a href="">Avaliação</a>
                               <a href="">Avaliação</a>

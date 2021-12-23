@@ -28,7 +28,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
         <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Estratégia baseada em inspeção</li>
+        <li class="breadcrumb-item active" aria-current="page">Métodos de Aprendizagem utilizando dados de Inspeções</li>
       </ol>
    </nav>
    <hr>
@@ -36,7 +36,7 @@
    <!--Topo-->
     <div class="estrategiaTopo container-fluid">
         <div class="title-ensino">
-            <h1>Estratégia baseada em inspeção</h1>
+            <h1>Métodos de Aprendizagem utilizando dados de Inspeções</h1>
         </div>
     </div>
       <!--fim topo-->

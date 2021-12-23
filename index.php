@@ -77,20 +77,20 @@
                     <div class="conteudoEstrategiasInfo">
                       <h4>Ao longo do curso(o instrutor atua apenas como moderador da atividade)</h4>
                       <ul>
-                        <li><a href="#">Serra de vaivém</a></li>
-                        <li><a href="#">Aprendizagem baseada em problemas (PBL) adaptado</a></li>
+                        <li><a href="serraVaiVem.php">Jigsaw</a></li>
+                        <li><a href="aprendizagemProblemas.php">Problem Based Learning (PBL) Adapted</a></li>
                       </ul>
                       
                       <h4>Ao Longo do curso (o instrutor apresenta os conceitos para a classe primeiro)</h4>
                       <ul>
-                        <li><a href="#">Abordagem Multimodal</a></li>
-                        <li><a href="#">Método de ensino da trilha dupla PBL+LBL</a></li>
+                        <li><a href="abordagemMultimodal.php">Multimodal Approach</a></li>
+                        <li><a href="metodoEnsino.php">PBL + LBL Double Track Teaching Method</a></li>
                       </ul>
 
                       <h4>Em algumas aulas (máximo três aulas)</h4>
                       <ul>
-                        <li><a href="#">Ji gsaw</a></li>
-                        <li><a href="#">Abordagem Multimodal</a></li>
+                        <li><a href="serraVaiVem.php">Ji gsaw</a></li>
+                        <li><a href="abordagemMultimodal.php">Multimodal Approach</a></li>
                       </ul>
                     </div>
                   </div>
@@ -102,20 +102,20 @@
                     <div class="conteudoEstrategiasInfo">
                       <h4>Os alunos precisam de ajuda para desenvolver os modelos</h4>
                       <ul>
-                        <li><a href="#">Exemplos positivos</a></li>
-                        <li><a href="#">Exemplos negativos</a></li>
+                        <li><a href="exemploPositivo.php">Positive Examples</a></li>
+                        <li><a href="ExemplosNegativos.php">Negative Examples </a></li>
                       </ul>
                       
                       <h4>Os alunos precisam praticar modelagem</h4>
                       <ul>
-                        <li><a href="#">Think-Pair-Square</a></li>
-                        <li><a href="#">Aprendizagem baseada em sistemas semelhantes</a></li>
+                        <li><a href="think.php">Think-Pair-Square</a></li>
+                        <li><a href="aprendizagemSemelhante.php">Aprendizagem Baseada em Sistemas Familiares</a></li>
                       </ul>
 
                       <h4>Os alunos precisam aprimorar ainda mais o conhecimento de modelagem de software</h4>
                       <ul>
-                        <li><a href="#">Aprendendo com exemplos errôneos</a></li>
-                        <li><a href="#">Estratégias baseada em inspeção</a></li>
+                        <li><a href="exemplosErroneos.php">Learning from Erroneous Examples</a></li>
+                        <li><a href="estrategiaInspecao.php">Métodos de Aprendizagem utilizando dados de Inspeções</a></li>
                       </ul>
                     </div>
                   </div>
@@ -144,23 +144,23 @@
                             <div class="item"><!--item-->
                               <h4>Aprendizagem baseada em sistemas semelhantes</h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>A  estratégia de Aprendizagem Baseada em Sistemas Similares permite que os alunos investiguem um sistema semelhante ao que pretendem modelar e, portanto, realizem a modelagem do novo sistema com base nas características identificadas no sistema escolhido  ( Stoecklin  et al. , 1998) .  </p>
-                              <a href="aprendizagemSemelhante.html" class="btn btn-block btn-success">Saiba mais</a>
+                              <p>O método <b>Aprendizagem Baseada em Sistemas Familiares</b> permite que os estudantes investiguem um sistema semelhante ao que se pretende modelar e, com isso, realizar a modelagem do novo sistema utilizando como base as características identificadas no sistema escolhido (Stoecklin et al., 1998). </p>
+                              <a href="aprendizagemSemelhante.php" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div>
                           <div class="col"><!--item-->
                             <div class="item"><!--item-->
-                              <h4>Serra de vaivém</h4>
+                              <h4>Jigsaw</h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>Jigsaw  é uma estratégia proposta por Aronson et al. (1998), e ec é uma estratégia que consiste em dividir o material de aprendizagem em tarefas parciais. Cada aluno da equipe é como uma peça de quebra-cabeça que realizará uma tarefa parcial, que ao final do processo será compartilhada com todos os demais membros da equipe  ( Deibel, 2005).</p>
-                              <a href="serraVaiVem.html" class="btn btn-block btn-success">Saiba mais</a>
+                              <p>O <b>Jigsaw</b> é uma técnica proposta por Aronson et al. (1998) e consiste em dividir o material de aprendizagem em tarefas parciais. Cada aluno da equipe é como uma peça de quebra-cabeças que executará uma tarefa parcial, que ao final do processo será compartilhada com todos os outros membros da equipe (Deibel, 2005).</p>
+                              <a href="serraVaiVem.php" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div><!--fim item-->
                           <div class="col"><!--item-->
                             <div class="item"><!--item-->
-                              <h4>Aprendendo com exemplos errôneos</h4>
+                              <h4>Learning from Erroneous Examples</h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>Aprender com  errôneas  Exemplos (ErrEx) é uma estratégia de aprendizagem activa que envolve os alunos em um exercício de aprendizagem ativa, oferecendo a oportunidade para uma experiência de aprendizagem construtiva e colaborativa através dos exemplos errados (Grosse e Renkl, 2007). Essa estratégia instrui os alunos a encontrar, explicar e corrigir erros (McLarenet al., 2016).</p>
+                              <p>O <b>Learning from Errouneous Examples</b> (ErrEx) é um método baseado em Aprendizagem Ativa que engaja os estudantes em um exercício de aprendizagem ativa, oferecendo a oportunidade para uma learning experience construtiva e colaborativa através dos exemplos errados (Grosse e Renkl, 2007). Este método instrui os estudantes a encontrar, explicar e corrigir os erros (McLaren et al., 2016).</p>
                               <a href="exemplosErroneos.html" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div><!--fim item-->
@@ -176,26 +176,26 @@
                         <div class="row">
                           <div class="col">
                             <div class="item"><!--item-->
-                              <h4>Estratégia baseada em inspeção</h4>
+                              <h4>Métodos de Aprendizagem utilizando dados de Inspeções</h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>A estratégia baseada em inspeção visa apoiar os alunos que estão aprendendo como modelar diagramas corretamente. Para isso, os alunos usam comentários de inspeção de diagramas previamente inspecionados por outros alunos   ( Kinjo et al. , 2006 ). </p>                              </p>
-                              <a href="estrategiaInspecao.html" class="btn btn-block btn-success">Saiba mais</a>
+                              <p>O <b>Método de Aprendizagem utilizando Dados de Inspeções</b> tem por objetivo apoiar os estudantes que estão aprendendo como modelar os diagramas corretamente. Para isso, os estudantes utilizam comentários de inspeção de diagramas previamente inspecionados por outros estudantes (Kinjo et al., 2006).  </p>
+                              <a href="estrategiaInspecao.php" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div>
                           <div class="col">
                             <div class="item"><!--item-->
-                              <h4>Abordagem Multimodal</h4>
+                              <h4>Multimodal Approach</h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>Esta é uma estratégia baseada em uma abordagem multimodal que visa promover as habilidades de modelagem do aluno que são relevantes para a indústria, combinando uma abordagem orientada a projetos multi-atividades que se concentra em princípios de aprendizagem ativa  ( Thevathayan e Hamilton, 2017) . </p>
-                              <a href="abordagemMultimodal.html" class="btn btn-block btn-success">Saiba mais</a>
+                              <p>Esta é uma abordagem multimodal que visa fomentar as habilidades de modelagem dos estudantes que são relevantes para a indústria, combinando uma abordagem orientada por projeto com várias atividades que focam em princípios de aprendizagem ativa (Thevathayan e Hamilton, 2017). </p>
+                              <a href="abordagemMultimodal.php" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div>
                           <div class="col">
                             <div class="item"><!--item-->
-                              <h4>Exemplos Negativos </h4>
+                              <h4>Negative Examples</h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>Exemplos negativos é um método de ensino baseado em uma estratégia de aprendizagem ativa que fornece problemas associados a descrições e exemplos de modelagem negativa, para que sejam incorporados ao ambiente de ensino de modelagem. </p>
-                              <a href="ExemplosNegativos.html" class="btn btn-block btn-success">Saiba mais</a>
+                              <p>O <b>Negative Examples</b> é um método que fornece diretrizes associadas a descrições e exemplos negativos de modelagem, para que estes sejam incorporados no ambiente de ensino de modelagem, fazendo com que os estudantes aprendam observando como se deve fazer uma modelagem de forma correta a partir de exemplos negativos trabalhados em sala de aula. </p>
+                              <a href="ExemplosNegativos.php" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div>
                         </div>
@@ -210,27 +210,26 @@
                         <div class="row">
                           <div class="col"><!--item-->
                             <div class="item"><!--item-->
-                              <h4>Método de ensino de trilha dupla PBL + LBL </h4>
+                              <h4>PBL + LBL Double Track Teaching Method</h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>
-                                Esta estratégia é baseada na aprendizagem baseada em palestras (LBL) e na aprendizagem baseada em problemas (PBL) . Nesta estratégia de ensino, o instrutor ensina a base teórica relacionada ao problema real e combina enquanto os alunos trabalham para a resolução do problema real. </p>
-                              <a href="metodoEnsino.html" class="btn btn-block btn-success">Saiba mais</a>
+                              <p>Esse método de ensino baseia-se na Lecture based learning (LBL) e  Problem based learnig (PBL). Neste método de ensino o professor ensina a base teórica relacionada ao problema real e combina enquanto os estudantes estão trabalhando para a resolução de um problemas real. </p>
+                              <a href="metodoEnsino.php" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div><!--fim item-->
                           <div class="col"><!--item-->
                             <div class="item"><!--item-->
-                              <h4>Exemplos positivos</h4>
+                              <h4>Positive Examples</h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>Exemplos positivos é uma estratégia que fornece diretrizes associadas a descrições e exemplos positivos de modelagem, de modo que sejam incorporados ao ambiente de ensino de modelagem, permitindo que os alunos aprendam observando como modelar corretamente.</p>
-                              <a href="exemploPositivo.html" class="btn btn-block btn-success">Saiba mais</a>
+                              <p>O <b>Positive Examples</b> é um método que fornece diretrizes associadas a descrições e exemplos positivos de modelagem, para que estes sejam incorporados no ambiente de ensino de modelagem, fazendo com que os estudantes aprendam observando como se deve fazer uma modelagem de forma correta.</p>
+                              <a href="exemploPositivo.php" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div><!--fim item-->
                           <div class="col"><!--item-->
                             <div class="item"><!--item-->
-                              <h4>Aprendizagem baseada em problemas (PBL) adaptado </h4>
+                              <h4>Problem Based Learning (PBL) Adapted </h4>
                               <h5>Qual é a estratégia?</h5>
-                              <p>O PBL Adaptado é uma estratégia pedagógica que enfatiza o papel de um problema em que os alunos são responsáveis ​​por sua aprendizagem  ( Boud e  Feletti, 1997) . Essa estratégia ajuda os alunos a desenvolver estratégias e construir conhecimento. A formação da equipe e a distribuição de papel são essenciais para o uso do PBL. ( Richardson e Delaney, 2009 ).</p>
-                              <a href="aprendizagemProblemas.html" class="btn btn-block btn-success">Saiba mais</a>
+                              <p>O PBL Adapted é um método pedagógico que enfatiza o papel de um problema, no qual os alunos são responsáveis pela sua aprendizagem (Boud e Feletti, 1997). Este método ajuda os alunos a desenvolver estratégias e construir conhecimento. Formação de equipe e distribuição de papéis são essenciais para o uso de PBL (Richardson e Delaney, 2009).</p>
+                              <a href="aprendizagemProblemas.php" class="btn btn-block btn-success">Saiba mais</a>
                             </div><!--fim item-->
                           </div><!--fim item-->
                         </div>
@@ -245,10 +244,11 @@
                           <div class="row">
                             <div class="col">
                               <div class="item" style="width: 300px;"><!--item-->
-                                <h4>Think-Pair-Square </h4>
+                                <h4>Think-Pair-Square</h4>
                                 <h5>Qual é a estratégia?</h5>
-                                <p>O Think-Pair-Square é projetado para promover o aprendizado, a discussão ativa e a resolução cooperativa de problemas entre os alunos (Lyman, 1981; Millis e Cottel, 1998) . O Think-Pair-Square é idealmente considerado quando se deseja que os alunos ganhem experiências de trabalho colaborativo. </p>
-                                <a href="think.html" class="btn btn-block btn-success">Saiba mais</a>
+                                <p>O Método <b>Think-Pair-Square</b> foi concebido para promover aprendizagens, discussões ativas e para auxiliar na resolução de problemas de forma cooperativa entre os estudantes (Lyman, 1981; Millis e Cottel, 1998). 
+                                <br>O método Think-Pair-Square é considerado idealmente quando se deseja que os estudantes obtenham experiências de trabalho colaborativo (Lyman, 1981).</p>
+                                <a href="think.php" class="btn btn-block btn-success">Saiba mais</a>
                               </div><!--fim item-->
                             </div>
                           </div>

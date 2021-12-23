@@ -29,7 +29,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Página inicial</a></li>
         <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Aprendendo com exemplos errôneos</li>
+        <li class="breadcrumb-item active" aria-current="page">Learning from Erroneous Examples</li>
       </ol>
    </nav>
    <hr>
@@ -37,7 +37,7 @@
    <!--Topo-->
     <div class="estrategiaTopo container-fluid">
         <div class="title-ensino">
-            <h1>Aprendendo com exemplos errôneos</h1>
+            <h1>Learning from Erroneous Examples</h1>
         </div>
     </div>
       <!--fim topo-->
