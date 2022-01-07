@@ -26,8 +26,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">Think-Pair-Square</li>
       </ol>
    </nav>
@@ -40,31 +40,37 @@
         </div>
     </div>
       <!--fim topo-->
-       
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-            <li><a href="requisicoesAssincronas/trink-pair-square/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/estrategia-alunos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/Organizar-alunos.html">Maneira de Organizar os alunos</a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/etapas-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/avalicoes-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/artigos-estrategias.html">Artigos com exemplos de uso de estratégia </a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/classificao.html">Classificação de Estratégia </a></li>
-            <li><a href="requisicoesAssincronas/trink-pair-square/referencia.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Qual é essa estratégia?</h1>
-<p>
-    O <b>Think-Pair-Square</b> é projetado para promover a aprendizagem, a discussão ativa e a resolução cooperativa de problemas entre os alunos (Lyman, 1981; Millis e Cottel, 1998) . O Think-Pair-Square é idealmente considerado quando se deseja que os alunos ganhem experiências de trabalho colaborativo. 
-</p>
-           </div>
-         </div>
-       </div>
+      <!--SOBRE ESTRATÉGIA-->
+      <div id="sobreEstrategia">
+
+        <div class="areaItem">
+          <div class="left">
+            <ul>
+              <li><a href="requisicoesAssincronas/trink-pair-square/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/estrategia-alunos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/Organizar-alunos.html">Maneiras de Organizar os alunos</a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/etapas-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/avalicoes-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/artigos-estrategias.html">Artigos com exemplos de uso de estratégia </a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/classificao.html">Classificação de Estratégia </a></li>
+              <li><a href="requisicoesAssincronas/trink-pair-square/referencia.html">Referências</a></li>
+            </ul>
+          </div>
+          <div class="rigth">
+            <div class="conteudo">
+              <h1>Qual é essa estratégia?</h1>
+  <p>
+  O Método <b>Think-Pair-Square</b> foi concebido para promover aprendizagens, discussões ativas e para auxiliar na resolução de problemas de forma cooperativa entre os estudantes (Lyman, 1981; Millis e Cottel, 1998). <br>
+
+O método Think-Pair-Square é considerado idealmente quando se deseja que os estudantes obtenham experiências de trabalho colaborativo (Lyman, 1981).
+  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--FIM SOBRE ESTRATÉGIA-->
 
 
        <div class="artefatos"><!--artetos-->
@@ -195,31 +201,35 @@
 
               </div>
               
-              <table class="table" style="padding: 0px 20px;">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">Univerdidade</th>
-                    <th scope="col">Curso</th>
-                    <th scope="col">Disciplina</th>
-                    <th scope="col">Alunos</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Universidade Federal do Amazonas</td>
-                    <td>Sistemas de informação</td>
-                    <td>Análise e Design de Software</td>
-                    <td>14</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              <div class="div-conteudo">
+                <table class="table-p">
+                  <thead>
+                    <tr class="back">
+                      <th class="left">Univerdidade</th>
+                      <th>Curso</th>
+                      <th>Componente</th>
+                      <th class="right">Alunos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="linha">
+                      <td class="left">Universidade Federal do Amazonas</td>
+                      <td>Sistemas de informação</td>
+                      <td>Análise e Design de Software</td>
+                      <td class="right">14 alunos</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+              
               
               <div class="row">
                 <div class="col pontos-positivos">
                   <h4>Pontos positivos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/positivo.png" alt="">
-                  </div>
+                  
                   
                   <ul><b>Diferentes pontos de vista durante a modelagem</b>
                     <li>A estratégia permite que a equipe tome decisões conjuntas durante a modelagem</li>
@@ -234,11 +244,8 @@
 
                 </div>
                 <div class="col pontos-negativos">
-                  <h4>pontos negativos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/negativo.png" alt="">
-                  </div>
-                  
+                  <h4>Pontos negativos</h4>
+                 
                   <ul><b>Diferentes pontos de vista durante a modelagem</b>
                     <li>Dificuldade em convergir as ideias dos membros da equipe</li>
                     <li>Falta de moderador nos grupos para tomar decisões</li>

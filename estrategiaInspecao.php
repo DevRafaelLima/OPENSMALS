@@ -26,8 +26,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">Métodos de Aprendizagem utilizando dados de Inspeções</li>
       </ol>
    </nav>
@@ -40,30 +40,35 @@
         </div>
     </div>
       <!--fim topo-->
-       
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/principais-ganhos-alunos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/organizar-aluno.html">Maneira de Organizar os aluno</a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/aplicar-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/avaliacoes.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/artigos.html">Artigos com exemplos de uso de estratégia </a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/classificao.html">Classificação de Estratégia </a></li>
-             <li><a href="requisicoesAssincronas/estrategia-inspecao/referencia.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Qual é a estratégia?</h1>
-             
-            <p>A  estratégia de Aprendizagem Baseada em Sistemas Similares permite que os alunos investiguem um sistema semelhante ao que pretendem modelar e, portanto, realizem a modelagem do novo sistema com base nas características identificadas no sistema escolhido  ( Stoecklin  et al. , 1998) .  </p>
-           </div>
-         </div>
-       </div>
+       <!--SOBRE A ESTRATÉGIA-->
+      <div id="sobreEstrategia">
+        <div class="areaItem">
+          <div class="left">
+            <ul>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/principais-ganhos-alunos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/organizar-aluno.html">Maneiras de Organizar os alunos</a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/aplicar-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/avaliacoes.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/artigos.html">Artigos com exemplos de uso de estratégia </a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/classificao.html">Classificação de Estratégia </a></li>
+              <li><a href="requisicoesAssincronas/estrategia-inspecao/referencia.html">Referências</a></li>
+            </ul>
+          </div>
+          <div class="rigth">
+            <div class="conteudo">
+              <h1>Qual é a estratégia?</h1>
+              
+              <p>O Método de <b>Aprendizagem utilizando Dados de Inspeções</b> tem por objetivo apoiar os estudantes que estão aprendendo como modelar os diagramas corretamente. Para isso, os estudantes utilizam comentários de inspeção de diagramas previamente inspecionados por outros estudantes (Kinjo et al., 2006).</p>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--FIM SOBRE ESTRATÉGIA-->
 
 
        <div class="artefatos"><!--artetos-->
@@ -181,7 +186,7 @@
 
       <section id="avaliacao">
           <div class="TitlePadrao">
-            <h2>Avaliazações Realizadas</h2>
+            <h2>Avaliações Realizadas</h2>
           </div>
 
           <div class="container-fluid" style="margin: 0;padding: 0;">
@@ -191,7 +196,38 @@
                 <p>As informações sobre a (s) classe (s) avaliada (s) podem ser visualizadas na tabela abaixo:</p>
 
               </div>
-              
+              <div class="div-conteudo">
+                <table class="table-p">
+                  <thead>
+                    <tr class="back">
+                      <th class="left">Univerdidade</th>
+                      <th>Curso</th>
+                      <th>Componente</th>
+                      <th class="right">Alunos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="linha">
+                      <td class="left">Universidade Federal do Amazonas</td>
+                      <td>Sistemas de informação</td>
+                      <td>Análise e Design de Software</td>
+                      <td class="right">14 alunos</td>
+                    </tr>
+                    <tr class="linha">
+                      <td class="left">Universidade Federal do Amazonas</td>
+                      <td>Ciência da Computação</td>
+                      <td>Análise e Design de Software</td>
+                      <td class="right">28 alunos</td>
+                    </tr>
+                    <tr class="linha">
+                      <td class="left" colspan="3"><b>Total</b></td>
+                      <td class="right"><b>42 alunos</b></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+<!--              
               <table class="table" style="padding: 0px 20px;">
                 <thead class="thead-dark">
                   <tr>
@@ -220,13 +256,11 @@
                   </tr>
                 </tbody>
               </table>
-              
+-->
               <div class="row">
                 <div class="col pontos-positivos">
                   <h4>Pontos positivos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/positivo.png" alt="">
-                  </div>
+                 
                   <b>Diferentes pontos de vista durante a modelagem</b>
                   <ul>
                     <li>A estratégia permite obter diferentes perspectivas</li>
@@ -244,9 +278,7 @@
                 </div>
                 <div class="col pontos-negativos">
                   <h4>Pontos negativos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/negativo.png" alt="">
-                  </div>
+                  
                   <b>Diferentes pontos de vista durante a modelagem</b>
                   <ul>
                     <li>Dificuldade em convergir as ideias dos membros da equipe</li>

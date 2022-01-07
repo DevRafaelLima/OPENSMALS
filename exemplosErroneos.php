@@ -27,8 +27,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">Learning from Erroneous Examples</li>
       </ol>
    </nav>
@@ -41,31 +41,36 @@
         </div>
     </div>
       <!--fim topo-->
-       
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/qual-e-a-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/quais-sao-os-principais-ganhos-estrategia-para-alunos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/maneira-organizar-alunos.html">Maneira de Organizar os aluno</a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/quais-pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/quais-etapas-aplicar-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/quanto-tempo-leva-para-implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/avaliacoes-feitas-com-essa-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/artigos-exemplos-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/classificao-estrategia.html">Classificação de Estratégia </a></li>
-             <li><a href="requisicoesAssincronas/exemplos-erroneos/referencias.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Aprendendo com exemplos errôneos</h1>
+
+      <!--sobre estratégia-->
+      <div id="sobreEstrategia">
+        <div class="areaItem">
+          <div class="left">
+            <ul>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/qual-e-a-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/quais-sao-os-principais-ganhos-estrategia-para-alunos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/maneira-organizar-alunos.html">Maneiras de Organizar os alunos</a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/quais-pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/quais-etapas-aplicar-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/quanto-tempo-leva-para-implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/avaliacoes-feitas-com-essa-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/artigos-exemplos-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/classificao-estrategia.html">Classificação de Estratégia </a></li>
+              <li><a href="requisicoesAssincronas/exemplos-erroneos/referencias.html">Referências</a></li>
+            </ul>
+          </div>
+          <div class="rigth">
+           <div class="conteudo">
+              <h1>Learning from Errouneous Examples (ErrEx)</h1>
              
-            <p><b>Aprender com  errôneas  Exemplos (ErrEx)</b> é uma estratégia de aprendizagem activa que envolve os alunos em um exercício de aprendizagem ativa, oferecendo a oportunidade para uma experiência de aprendizagem construtiva e colaborativa através dos exemplos errados (Grosse e Renkl, 2007). Essa estratégia instrui os alunos a encontrar, explicar e corrigir erros (McLarenet al., 2016).</p>
-            <p></p>
-           </div>
-         </div>
-       </div>
+             <p>O <b>Learning from Errouneous Examples (ErrEx)</b> é um método baseado em Aprendizagem Ativa que engaja os estudantes em um exercício de aprendizagem ativa, oferecendo a oportunidade para uma learning experience construtiva e colaborativa através dos exemplos errados (Grosse e Renkl, 2007). Este método instrui os estudantes a encontrar, explicar e corrigir os erros (McLaren et al., 2016).</p>
+             
+            </div>
+          </div>
+        </div>
+        
+      </div> 
+      <!--fim sobre estratégia-->
 
 
        <div class="artefatos"><!--artetos-->
@@ -183,7 +188,7 @@
 
       <section id="avaliacao">
           <div class="TitlePadrao">
-            <h2>Avaliazações Realizadas</h2>
+            <h2>Avaliações Realizadas</h2>
           </div>
 
           <div class="container-fluid" style="margin: 0;padding: 0;">
@@ -193,31 +198,34 @@
                 <p>As informações sobre a (s) classe (s) avaliada (s) podem ser visualizadas na tabela abaixo:</p>
               </div>
               
-              <table class="table" style="padding: 0px 20px;">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">Univerdidade</th>
-                    <th scope="col">Curso</th>
-                    <th scope="col">Componente</th>
-                    <th scope="col">Alunos</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Universidade Federal do Amazonas</td>
-                    <td>Ciência da Computação</td>
-                    <td>Análise e Design de Software</td>
-                    <td>44</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="div-conteudo">
+                <table class="table-p">
+                  <thead>
+                    <tr class="back">
+                      <th class="left">Univerdidade</th>
+                      <th>Curso</th>
+                      <th>Componente</th>
+                      <th class="right">Alunos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="linha">
+                      <td class="left">Universidade Federal do Amazonas</td>
+                      <td>Ciência da Computação</td>
+                      <td>Análise e Design de Software</td>
+                      <td class="right">44 alunos</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
               
+                
               <div class="row">
                 <div class="col pontos-positivos">
                   <h4>Pontos positivos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/positivo.png" alt="">
-                  </div>
+                 
                   <p><b>ErrEx ajudou no aprendizado do diagrama</b></p>
                   <ul>
                     <li>ErrEx ajudou na identificação de defeitos durante a modelagem</li>
@@ -227,10 +235,8 @@
                   </ul>
                 </div>
                 <div class="col pontos-negativos">
-                  <h4>pontos negativos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/negativo.png" alt="">
-                  </div>
+                  <h4>Pontos negativos</h4>
+                  
                   <p><b>O método ErrEx não ajudou no aprendizado durante a modelagem</b></p>
                   <ul>
                     <li>ErrEx não ajudou a modelar corretamente o diagrama</li>

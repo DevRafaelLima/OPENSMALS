@@ -26,8 +26,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">Multimodal Approach</li>
       </ol>
    </nav>
@@ -40,29 +40,33 @@
         </div>
     </div>
       <!--fim topo-->
-       
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/principais-ganhos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/ornagizar-alunos.html">Maneira de Organizar os aluno</a></li>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/abordagem-mulitmodal/etapas-requisitos.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/avaliacoes-feitas.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/Artigos-com-exemplos.html">Artigos com exemplos de uso de estratégia </a></li>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/classificacao-estrategia.html">Classificação de Estratégia </a></li>
-            <li><a href="requisicoesAssincronas/abordagem-multimodal/referencia.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Qual é essa estratégia ?</h1>
-<p>Esta é uma <b>estratégia baseada em uma abordagem multimodal</b> que visa promover as habilidades de modelagem do aluno que são relevantes para a indústria, combinando uma abordagem orientada a projetos multi-atividades que se concentra em princípios de aprendizagem ativa  ( Thevathayan e Hamilton, 2017).</p>
-           </div>
-         </div>
-       </div>
+       <!--SOBRE ESTRATÉGIA-->
+    <div id="sobreEstrategia">
+
+      <div class="areaItem">
+        <div class="left">
+          <ul>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/principais-ganhos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/ornagizar-alunos.html">Maneiras de Organizar os alunos</a></li>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+           <li><a href="requisicoesAssincronas/abordagem-mulitmodal/etapas-requisitos.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/avaliacoes-feitas.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/Artigos-com-exemplos.html">Artigos com exemplos de uso de estratégia </a></li>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/classificacao-estrategia.html">Classificação de Estratégia </a></li>
+           <li><a href="requisicoesAssincronas/abordagem-multimodal/referencia.html">Referências</a></li>
+          </ul>
+        </div>
+        <div class="rigth">
+         <div class="conteudo">
+           <h1>Qual é essa estratégia ?</h1>
+           <p>Esta é uma abordagem multimodal que visa fomentar as habilidades de modelagem dos estudantes que são relevantes para a indústria, combinando uma abordagem orientada por projeto com várias atividades que focam em princípios de aprendizagem ativa (Thevathayan e Hamilton, 2017). </p>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <!--FIM SOBRE ESTRATÉGIA-->
 
 
        <div class="artefatos"><!--artetos-->

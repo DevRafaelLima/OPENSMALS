@@ -26,8 +26,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">PBL + LBL Double Track Teaching Method</li>
       </ol>
    </nav>
@@ -40,31 +40,36 @@
         </div>
     </div>
       <!--fim topo-->
-       
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-            <li><a href="requisicoesAssincronas/metodo-ensino/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/principais-ganhos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/organizar-alunos.html">Maneira de Organizar os aluno</a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/etapas-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/avaliacao-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/artigo-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/classificao.html">Classificação de Estratégia </a></li>
-            <li><a href="requisicoesAssincronas/metodo-ensino/referencias.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Qual é essa estratégia ?</h1>
-<p>
-    Esta estratégia é baseada na <b>aprendizagem</b> baseada em <b>palestras (LBL)</b> e na <b>aprendizagem baseada em problemas (PBL)</b>. Nesta estratégia de ensino, o instrutor ensina a base teórica relacionada ao problema real e combina enquanto os alunos trabalham para a resolução do problema real. 
-</p>
-           </div>
-         </div>
-       </div>
+       <!--SOBRE A ESTRATÉGIA-->
+      <div id="sobreEstrategia">
+        <div class="areaItem">
+          <div class="left">
+            <ul>
+              <li><a href="requisicoesAssincronas/metodo-ensino/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/principais-ganhos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/organizar-alunos.html">Maneiras de Organizar os alunos</a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/etapas-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/avaliacao-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/artigo-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/classificao.html">Classificação de Estratégia </a></li>
+              <li><a href="requisicoesAssincronas/metodo-ensino/referencias.html">Referências</a></li>
+            </ul>
+          </div>
+          <div class="rigth">
+            <div class="conteudo">
+              <h1>Qual é essa estratégia ?</h1>
+  <p>
+  Esse método de ensino baseia-se na Lecture based learning (LBL) e  Problem based learnig (PBL). Neste método de ensino o professor ensina a base teórica relacionada ao problema real e combina enquanto os estudantes estão trabalhando para a resolução de um problemas real. 
+
+  </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+       <!--FIM SOBRE A ESTRATÉGIA-->
 
 
        <div class="artefatos"><!--artetos-->

@@ -27,8 +27,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">Exemplos positivos</li>
       </ol>
    </nav>
@@ -37,35 +37,40 @@
    <!--Topo-->
     <div class="estrategiaTopo container-fluid">
         <div class="title-ensino">
-            <h1>Exemplos positivos</h1>
+            <h1>Positive Examples</h1>
         </div>
     </div>
-      <!--fim topo-->
-       
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/estrategias-para-alunos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/organizar-alunos.html">Maneira de Organizar os alunos</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/aplicar-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/avaliacoes-feitas.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/artigos-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/classificacao.html">Classificação de Estratégia </a></li>
-            <li><a href="requisicoesAssincronas/exemplos-positivos/referencia.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Qual é essa estratégia?</h1>
-<p>
-    <b>Exemplos positivos</b> é uma estratégia que fornece diretrizes associadas a descrições e exemplos positivos de modelagem, de modo que sejam incorporados ao ambiente de ensino de modelagem, permitindo que os alunos aprendam observando como modelar corretamente.
-</p>
-           </div>
-         </div>
-       </div>
+    <!--fim topo-->
+      
+    <!--SOBRE ESTRATÉGIA-->
+    <div id="sobreEstrategia">
+
+      <div class="areaItem">
+        <div class="left">
+          <ul>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/estrategias-para-alunos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/organizar-alunos.html">Maneiras de Organizar os alunos</a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/aplicar-estrategia.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/avaliacoes-feitas.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/artigos-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/classificacao.html">Classificação de Estratégia </a></li>
+           <li><a href="requisicoesAssincronas/exemplos-positivos/referencia.html">Referências</a></li>
+          </ul>
+        </div>
+        <div class="rigth">
+         <div class="conteudo">
+           <h1>Qual é essa estratégia?</h1>
+  <p>
+  O <b>Positive Examples</b> é um método que fornece diretrizes associadas a descrições e exemplos positivos de modelagem, para que estes sejam incorporados no ambiente de ensino de modelagem, fazendo com que os estudantes aprendam observando como se deve fazer uma modelagem de forma correta.  
+  </p>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!--FIM SOBRE ESTRATÉGIA-->
 
 
        <div class="artefatos"><!--artetos-->
@@ -183,7 +188,7 @@
 
       <section id="avaliacao">
           <div class="TitlePadrao">
-            <h2>Avaliazações Realizadas</h2>
+            <h2>Avaliações Realizadas</h2>
           </div>
 
           <div class="container-fluid" style="margin: 0;padding: 0;">
@@ -193,32 +198,34 @@
                 <p>As informações sobre a (s) classe (s) avaliada (s) podem ser visualizadas na tabela abaixo:</p>
 
               </div>
+
+              <div class="div-conteudo">
+                <table class="table-p">
+                  <thead>
+                    <tr class="back">
+                      <th class="left">Univerdidade</th>
+                      <th>Curso</th>
+                      <th>Componente</th>
+                      <th class="right">Alunos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="linha">
+                      <td class="left">Universidade Federal do Amazonas</td>
+                      <td>Ciência da Computação</td>
+                      <td>Introdução à Engenharia de Software</td>
+                      <td class="right">28 alunos</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>  
               
-              <table class="table" style="padding: 0px 20px;">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">Univerdidade</th>
-                    <th scope="col">Curso</th>
-                    <th scope="col">Disciplina</th>
-                    <th scope="col">Alunos</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Universidade Federal do Amazonas</td>
-                    <td>Ciência da Computação</td>
-                    <td>Introdução à Engenharia de Software</td>
-                    <td>28</td>
-                  </tr>
-                </tbody>
-              </table>
-              
+
               <div class="row">
                 <div class="col pontos-positivos">
                   <h4>Pontos positivos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/positivo.png" alt="">
-                  </div>
+                  
                   <p><b>A estratégia apóia durante a modelagem</b></p>
                   <ul>
                     <li>A estratégia orienta os alunos por meio da modelagem</li>
@@ -226,10 +233,8 @@
                   </ul>
                 </div>
                 <div class="col pontos-negativos">
-                  <h4>pontos negativos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/negativo.png" alt="">
-                  </div>
+                  <h4>Pontos negativos</h4>
+                  
                   <p><b>A  estratégia  não suporta durante a modelagem</b></p>
                   <ul>
                     <li>A  estratégia  não suporta devido ao não uso dos artefatos usados ​​(exemplos positivos usados ​​pelo instrutor)</li>

@@ -43,7 +43,7 @@
     <ul>
       <li>Percepção do Questionário de Avaliação de Aprendizagem sobre a estratégia
         <ul>
-          <li>Se preferir, uma versão do questionário está <a href="">disponível aqui.</a></li>
+          <li>Se preferir, uma versão do questionário está <a href="estrategias.php">disponível aqui.</a></li>
         </ul>
       </li>
       <li>Quadro de grupo de foco: se os instrutores desejam coletar dados qualitativos, fornecemos um quadro de grupo de foco.</li>

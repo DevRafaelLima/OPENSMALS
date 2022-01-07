@@ -24,7 +24,7 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
+          <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
           <li class="breadcrumb-item active" aria-current="page">Estratégias de Ensino</li>
         </ol>
      </nav>
@@ -104,7 +104,7 @@
                         </p>
                           <div class="collapse" id="erroneos">
                             <div class="card card-body">
-                                Aprender com  errôneas  Exemplos (ErrEx) é uma estratégia de aprendizagem activa que envolve os alunos em um exercício de aprendizagem ativa, oferecendo a oportunidade para uma experiência de aprendizagem construtiva e colaborativa através dos exemplos errados (Grosse e Renkl, 2007). Essa estratégia instrui os alunos a encontrar, explicar e corrigir erros (McLarenet al., 2016).
+                            O <b>Learning from Errouneous Examples (ErrEx)</b> é um método baseado em Aprendizagem Ativa que engaja os estudantes em um exercício de aprendizagem ativa, oferecendo a oportunidade para uma learning experience construtiva e colaborativa através dos exemplos errados (Grosse e Renkl, 2007). Este método instrui os estudantes a encontrar, explicar e corrigir os erros (McLaren et al., 2016).
                                 <a href="exemplosErroneos.php" class="btn btn-block">Saiba mais</a>
                             </div>
                           </div>
@@ -174,7 +174,7 @@
                         </p>
                           <div class="collapse" id="exemplosNegativos">
                             <div class="card card-body">
-                                Exemplos negativos é um método de ensino baseado em uma estratégia de aprendizagem ativa que fornece problemas associados a descrições e exemplos de modelagem negativa para que sejam incorporados ao ambiente de ensino de modelagem. 
+                            <p>O <b>Negative Examples</b> é um método que fornece diretrizes associadas a descrições e exemplos negativos de modelagem, para que estes sejam incorporados no ambiente de ensino de modelagem, fazendo com que os estudantes aprendam observando como se deve fazer uma modelagem de forma correta a partir de exemplos negativos trabalhados em sala de aula.
                                 <a href="ExemplosNegativos.php" class="btn btn-block">Saiba mais</a>
                             </div>
                           </div>
@@ -221,7 +221,7 @@
                         </p>
                           <div class="collapse" id="exemplosPositivos">
                             <div class="card card-body">
-                                Exemplos positivos é uma estratégia que fornece diretrizes associadas a descrições e exemplos positivos de modelagem, de modo que sejam incorporados ao ambiente de ensino de modelagem, permitindo que os alunos aprendam observando como modelar corretamente.
+                                O <b>Positive Examples</b> é um método que fornece diretrizes associadas a descrições e exemplos positivos de modelagem, para que estes sejam incorporados no ambiente de ensino de modelagem, fazendo com que os estudantes aprendam observando como se deve fazer uma modelagem de forma correta.  
                                 <a href="exemploPositivo.php" class="btn btn-block">Saiba mais</a>
                             </div>
                           </div>
@@ -244,7 +244,7 @@
                         </p>
                           <div class="collapse" id="problemasAdaptado">
                             <div class="card card-body">
-                                O PBL Adaptado é uma estratégia pedagógica que enfatiza o papel de um problema em que os alunos são responsáveis ​​por sua aprendizagem  ( Boud e  Feletti, 1997) . Essa estratégia ajuda os alunos a desenvolver estratégias e construir conhecimento. A formação de equipes e a distribuição de papel são essenciais para o uso do PBL. ( Richardson e Delaney, 2009 ).
+                            O <b>PBL Adapted</b> é um método pedagógico que enfatiza o papel de um problema, no qual os alunos são responsáveis pela sua aprendizagem (Boud e Feletti, 1997). Este método ajuda os alunos a desenvolver estratégias e construir conhecimento. Formação de equipe e distribuição de papéis são essenciais para o uso de PBL (Richardson e Delaney, 2009).
                                 <a href="aprendizagemProblemas.php" class="btn btn-block">Saiba mais</a>
                             </div>
                           </div>
@@ -268,7 +268,10 @@
                         </p>
                           <div class="collapse" id="square">
                             <div class="card card-body">
-                                O Think-Pair-Square é projetado para promover o aprendizado, a discussão ativa e a resolução cooperativa de problemas entre os alunos (Lyman, 1981; Millis e Cottel, 1998) . O Think-Pair-Square é idealmente considerado quando se deseja que os alunos ganhem experiências de trabalho colaborativo. 
+                            O Método <b>Think-Pair-Square</b> foi concebido para promover aprendizagens, discussões ativas e para auxiliar na resolução de problemas de forma cooperativa entre os estudantes (Lyman, 1981; Millis e Cottel, 1998). <br>
+
+                            O método Think-Pair-Square é considerado idealmente quando se deseja que os estudantes obtenham experiências de trabalho colaborativo (Lyman, 1981).
+
                                 <a href="think.php" class="btn btn-block">Saiba mais</a>
                             </div>
                           </div>

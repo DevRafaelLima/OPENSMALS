@@ -26,8 +26,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">Jigsaw</li>
       </ol>
    </nav>
@@ -40,28 +40,31 @@
         </div>
     </div>
       <!--fim topo-->
-       
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-             <li><a href="requisicoesAssincronas/vaivem/qualEstrategia.html" class="ativo">Qual é a estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/vaivem/principais-ganhos.html">Quais são os principais ganhos da estratégia para os alunos</a></li>
-             <li><a href="requisicoesAssincronas/vaivem/organizarAlunos.html">Maneira de Organizar os aluno</a></li>
-             <li><a href="requisicoesAssincronas/vaivem/preRequisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/vaivem/principaisEstrategias.html">Quais são as etapas para aplicar essa estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/vaivem/quantoTempo.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/vaivem/avaliacoesFeitas.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-             <li><a href="requisicoesAssincronas/vaivem/exemplosUso.html">Artigos com exemplos de uso de estratégia </a></li>
-             <li><a href="requisicoesAssincronas/vaivem/classificacao.html">Classificação de Estratégia </a></li>
-             <li><a href="requisicoesAssincronas/vaivem/referencias.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Qual é essa estratégia?</h1>
-            <p><b>Jigsaw  </b>é uma estratégia proposta por Aronson et al. (1998), e ec é uma estratégia que consiste em dividir o material de aprendizagem em tarefas parciais. Cada aluno da equipe é como uma peça de quebra-cabeça que realizará uma tarefa parcial, que ao final do processo será compartilhada com todos os demais membros da equipe  ( Deibel, 2005).  </p>
+       <div id="sobreEstrategia">
+
+         <div class="areaItem">
+           <div class="left">
+             <ul>
+               <li><a href="requisicoesAssincronas/vaivem/qualEstrategia.html" class="ativo">Qual é a estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/vaivem/principais-ganhos.html">Quais são os principais ganhos da estratégia para os alunos</a></li>
+               <li><a href="requisicoesAssincronas/vaivem/organizarAlunos.html">Maneiras de Organizar os alunos</a></li>
+               <li><a href="requisicoesAssincronas/vaivem/preRequisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/vaivem/principaisEstrategias.html">Quais são as etapas para aplicar essa estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/vaivem/quantoTempo.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/vaivem/avaliacoesFeitas.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/vaivem/exemplosUso.html">Artigos com exemplos de uso de estratégia </a></li>
+               <li><a href="requisicoesAssincronas/vaivem/classificacao.html">Classificação de Estratégia </a></li>
+               <li><a href="requisicoesAssincronas/vaivem/referencias.html">Referências</a></li>
+             </ul>
+           </div>
+           <div class="rigth">
+             <div class="conteudo">
+               <h1>Qual é essa estratégia?</h1>
+               <p><b>Jigsaw  </b>é uma estratégia proposta por Aronson et al. (1998), e ec é uma estratégia que consiste em dividir o material de aprendizagem em tarefas parciais. Cada aluno da equipe é como uma peça de quebra-cabeça que realizará uma tarefa parcial, que ao final do processo será compartilhada com todos os demais membros da equipe  ( Deibel, 2005).  </p>
+             </div>
            </div>
          </div>
+         
        </div>
 
 

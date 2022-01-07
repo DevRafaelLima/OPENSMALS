@@ -26,8 +26,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">Negative Examples</li>
       </ol>
    </nav>
@@ -40,32 +40,34 @@
         </div>
     </div>
       <!--fim topo-->
-       
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/principais-estrategias.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/organizar-alunos.html">Maneira de Organizar os aluno</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/etapas-estrategias.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/avaliacoes-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/artigos-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/classificacao.html">Classificação de Estratégia </a></li>
-            <li><a href="requisicoesAssincronas/exemplos-negativos/referencia.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Qual é essa estratégia?</h1>
-<p>
-    <b>Exemplos negativos</b> é um método de ensino baseado em uma estratégia de aprendizagem ativa que fornece problemas associados a descrições e exemplos de modelagem negativa para que sejam incorporados ao ambiente de ensino de modelagem. 
-</p>
+       <!--SOBRE ESTRATÉGIA-->
+       <div id="sobreEstrategia">
+
+         <div class="areaItem">
+           <div class="left">
+             <ul>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/principais-estrategias.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/organizar-alunos.html">Maneiras de Organizar os alunos</a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/etapas-estrategias.html">Quais são as etapas para aplicar essa estratégia ?</a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/avaliacoes-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/artigos-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/classificacao.html">Classificação de Estratégia </a></li>
+               <li><a href="requisicoesAssincronas/exemplos-negativos/referencia.html">Referências</a></li>
+             </ul>
+           </div>
+           <div class="rigth">
+             <div class="conteudo">
+            
+               <h1>Qual é essa estratégia?</h1>
+               <p>O <b>Negative Examples</b> é um método que fornece diretrizes associadas a descrições e exemplos negativos de modelagem, para que estes sejam incorporados no ambiente de ensino de modelagem, fazendo com que os estudantes aprendam observando como se deve fazer uma modelagem de forma correta a partir de exemplos negativos trabalhados em sala de aula. </p>
+             </div>
            </div>
          </div>
        </div>
-
+      <!--FIM SOBRE ESTRATÉGIA-->
 
        <div class="artefatos"><!--artetos-->
          <!--incio container-fluid-->
@@ -182,7 +184,7 @@
 
       <section id="avaliacao">
           <div class="TitlePadrao">
-            <h2>Avaliazações Realizadas</h2>
+            <h2>Avaliações Realizadas</h2>
           </div>
 
           <div class="container-fluid" style="margin: 0;padding: 0;">
@@ -193,55 +195,54 @@
 
               </div>
               
-              <table class="table" style="padding: 0px 20px;">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">Univerdidade</th>
-                    <th scope="col">Curso</th>
-                    <th scope="col">Disciplina</th>
-                    <th scope="col">Alunos</th>
+              <div class="div-conteudo">
+                <table class="table-p">
+                  <thead>
+                    <tr class="back">
+                      <th class="left">Univerdidade</th>
+                      <th>Curso</th>
+                      <th>Componente</th>
+                      <th class="right">Alunos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="linha">
+                      <td class="left">Universidade Federal do Amazonas</td>
+                      <td>Ciência da Computação</td>
+                      <td>Análise e Design de Software</td>
+                      <td class="right">28 alunos</td>
+                    </tr>
+                    <tr class="linha">
+                      <td class="left">Universidade Estadual de Maringá</td>
+                      <td>Ciência da Computação</td>
+                      <td>Engenharia de software</td>
+                      <td class="right">35 alunos</td>
+                    </tr>
+                    <tr>
+                    <td colspan="3" class="left"><b>Total</b></td>
+                    <td class="right"><b>63 alunos</b></td>
                   </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Universidade Federal do Amazonas</td>
-                    <td>Ciência da Computação</td>
-                    <td>Análise e Design de Software</td>
-                    <td>28</td>
-                  </tr>
-                  <tr>
-                    <td>Universidade Estadual de Maringá</td>
-                    <td>Ciência da Computação</td>
-                    <td>Engenharia de software</td>
-                    <td>35</td>
-                  </tr>
-                  <tr>
-                    <td colspan="3"><b>Total</b></td>
-                    <td><b>63</b></td>
-                  </tr>
-                </tbody>
-              </table>
-              
+                  </tbody>
+                </table>
+
+              </div>
+   
               <div class="row">
                 <div class="col pontos-positivos">
                   <h4>Pontos positivos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/positivo.png" alt="">
-                  </div>
-                  <p><b>A estratégia apóia durante a modelagem</b></p>
+                  
+                  <p><b>A estratégia apoia durante a modelagem</b></p>
                   <ul>
                     <li>A estratégia orienta os alunos por meio da modelagem</li>
                     <li>A estratégia auxilia os alunos na identificação de defeitos durante a modelagem</li>
                   </ul>
                 </div>
                 <div class="col pontos-negativos">
-                  <h4>pontos negativos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/negativo.png" alt="">
-                  </div>
+                  <h4>Pontos negativos</h4>
+                  
                   <p><b>A  estratégia  não suporta durante a modelagem</b></p>
                   <ul>
-                    <li>A  estratégia  não suporta devido ao não uso dos artefatos usados ​​(exemplos negativos usados ​​pelo instrutor)</li>
+                    <li>A  estratégia  não suporta devido ao não uso dos artefatos usados ​​(exemplos negativos usados ​​pelo instrutor). </li>
                   </ul>
                 </div>
               </div>

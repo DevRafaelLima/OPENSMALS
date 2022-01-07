@@ -26,8 +26,8 @@
     <!--Migalha de pão-->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Página inicial</a></li>
-        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.html">Estratégias de Ensino</a></li>
+        <li class="breadcrumb-item"><a href="index.php">Página inicial</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="escolhendoEstrategia.php">Estratégias de Ensino</a></li>
         <li class="breadcrumb-item active" aria-current="page">Problem Based Learning (PBL) Adapted</li>
       </ol>
    </nav>
@@ -41,30 +41,35 @@
     </div>
       <!--fim topo-->
        
-       <div class="areaItem">
-         <div class="left">
-           <ul>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/principais-ganhos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/organizar-alunos.html">Maneira de Organizar os alunos</a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/etapas-estrategias.html">Quais são as etapas para aplicar essa estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/avaliacoes-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/artigos-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/classificacao.html">Classificação de Estratégia </a></li>
-            <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/referencia.html">Referências</a></li>
-           </ul>
-         </div>
-         <div class="rigth">
-          <div class="conteudo">
-            <h1>Qual é essa estratégia ?</h1>
-<p>
-    O <b>PBL Adaptado</b> é uma estratégia pedagógica que enfatiza o papel de um problema em que os alunos são responsáveis ​​por sua aprendizagem  ( Boud e  Feletti, 1997) . Essa estratégia ajuda os alunos a desenvolver estratégias e construir conhecimento. A formação da equipe e a distribuição de papel são essenciais para o uso do PBL. ( Richardson e Delaney, 2009 ).
-</p>
-           </div>
-         </div>
-       </div>
+      <!--SOBRE ESTRATÉGIA-->
+      <div id="sobreEstrategia">
+
+          <div class="areaItem">
+            <div class="left">
+              <ul>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/qual-estrategia.html" class="ativo">Qual é a estratégia?</a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/principais-ganhos.html">Quais são os principais ganhos da estratégia para os alunos?</a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/organizar-alunos.html">Maneiras de Organizar os alunos</a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/pre-requisitos.html">Quais são os pre-requisitos para usar esta estratégia?</a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/etapas-estrategias.html">Quais são as etapas para aplicar essa estratégia?</a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/implementar-estrategia.html">Quanto tempo leva para preparar e implementar a estratégia?</a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/avaliacoes-estrategia.html">Venha conferir algumas avaliações feitas com essa estratégia?</a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/artigos-estrategia.html">Artigos com exemplos de uso de estratégia </a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/classificacao.html">Classificação de Estratégia </a></li>
+                <li><a href="requisicoesAssincronas/aprendizagem-baseada-problema/referencia.html">Referências</a></li>
+              </ul>
+            </div>
+            <div class="rigth">
+              <div class="conteudo">
+                <h1>Qual é essa estratégia ?</h1>
+    <p>
+        O <b>PBL Adaptado</b> é uma estratégia pedagógica que enfatiza o papel de um problema em que os alunos são responsáveis ​​por sua aprendizagem  ( Boud e  Feletti, 1997) . Essa estratégia ajuda os alunos a desenvolver estratégias e construir conhecimento. A formação da equipe e a distribuição de papel são essenciais para o uso do PBL. ( Richardson e Delaney, 2009 ).
+    </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!--FIM SOBRE ESTRATÉGIA-->
 
 
        <div class="artefatos"><!--artetos-->
@@ -182,7 +187,7 @@
 
       <section id="avaliacao">
           <div class="TitlePadrao">
-            <h2>Avaliazações Realizadas</h2>
+            <h2>Avaliações Realizadas</h2>
           </div>
 
           <div class="container-fluid" style="margin: 0;padding: 0;">
@@ -192,32 +197,32 @@
                 <p>As informações sobre a (s) classe (s) avaliada (s) podem ser visualizadas na tabela abaixo:</p>
 
               </div>
-              
-              <table class="table" style="padding: 0px 20px;">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col">Univerdidade</th>
-                    <th scope="col">Curso</th>
-                    <th scope="col">Disciplina</th>
-                    <th scope="col">Alunos</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Universidade Federal do Amazonas</td>
-                    <td>Ciência da Computação</td>
-                    <td>Análise e Design de Software</td>
-                    <td>44</td>
-                  </tr>
-                </tbody>
-              </table>
-              
+              <div class="div-conteudo">
+                <table class="table-p">
+                  <thead>
+                    <tr class="back">
+                      <th class="left">Univerdidade</th>
+                      <th>Curso</th>
+                      <th>Componente</th>
+                      <th class="right">Alunos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="linha">
+                      <td class="left">Universidade Federal do Amazonas</td>
+                      <td>Ciência da Computação</td>
+                      <td>Análise e Design de Software</td>
+                      <td class="right">44 alunos</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+         
               <div class="row">
                 <div class="col pontos-positivos">
                   <h4>Pontos positivos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/positivo.png" alt="">
-                  </div>
+                  
                   
                   <ul><b>PBL ajudou a aprender os diagramas:</b>
                     <li>PBL estimulou a compreensão dos conceitos aprendidos sobre diagramas</li>
@@ -233,9 +238,7 @@
                 </div>
                 <div class="col pontos-negativos">
                   <h4>pontos negativos</h4>
-                  <div class="imagem">
-                    <img src="assets/img/negativo.png" alt="">
-                  </div>
+                 
                   
                   <ul><b>PBL não ajudou no aprendizado durante a modelagem:</b>
                     <li>O tamanho da equipe influenciou negativamente a modelagem</li>
