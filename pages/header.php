@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header class="container-fluid">
     <div class="container-fluid">
         <div class="header">
@@ -107,6 +110,19 @@
                   <li><a href="momentosAprendizagem.php">Momentos de Aprendizagem</a></li>
                   <li><a href="artefatosEnsino.php">Artefatos de Ensino</a></li>
                   <li><a href="noticias.php">Notícias</a></li>
+                  <?php if(isset($_SESSION['email']) && !empty($_SESSION['email'])):?>
+                    
+                      <li><a href="minha-area.php">Minha área</a></li>
+                      <li><a href="sair.php">sair</a></li>
+                    
+                  <?php else: ?>
+                    
+                      <li><a href="cadastro.php">Cadastre-se</a></li>
+                      <li><a href="login.php">Login</a></li>
+                  <?php endif ?>  
+                 <!--
+                  <li><a href="noticias.php">Área adminstrativa</a></li>
+-->
                 </ul>
             </div>
         </div>
