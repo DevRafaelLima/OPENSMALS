@@ -1,0 +1,18 @@
+.header {
+    
+    padding: 3px 30px 3px 30px;
+}
+#lado-direito{
+    height: calc(100vh - 30px);
+}
+#lado-direito h1 {
+    font-size: 20px;
+}
+#lado-esquerdo{
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: calc(100vh - 50px);
+}
+#avaliacao {
+    display: block;
+}
