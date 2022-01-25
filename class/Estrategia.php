@@ -15,10 +15,13 @@ class Estrategia {
     private $preRequisitos;
     private $status;
     private $cod_usuario;
+    private $comments;
 
     public function __construct(){
 
     }
+    public function setComments($x){$this->comments = $x;}
+    public function getComments(){return $this->comments;}
     public function setPreRequisitos($x){$this->preRequisitos = $x;}
     public function getPreRequisitos(){return $this->preRequisitos;}
     public function setCodUsuario($cod){
@@ -104,6 +107,7 @@ interface EstrategiaDAO{
     public function findById($id);
     public function update(Estrategia $e);
     public function detele($id);
-
+    public function findAllAvall();
+    public function avaliar(Estrategia $e);
 }
 ?>

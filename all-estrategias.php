@@ -23,18 +23,20 @@ $estrategias = $estrategiaDao->findAll();
           <th scope="row"><?= $estrategia->getCod();?></th>
           <td><?=$estrategia->getNome()?></td>
           <td>
-              <?php if($estrategia->getStatus() == 1):?>
-                esperando avaliação
-              <?php elseif($estrategia->getStatus() == 2):?>  
+              <?php if($estrategia->getStatus() == 0):?>
+                Não Avaliado
+              <?php elseif($estrategia->getStatus() == 1):?>  
                 Aprovado
-              <?php else:?>  
-                Não Aprovado
+              <?php elseif($estrategia->getStatus() == 2):?>  
+                Não aprovado 
+              <?php elseif($estrategia->getStatus() == 3):?>
+                Necessito de mais informações
               <?php endif ?>
           </td>
           <td>
                   
                   <?php if(isset($_SESSION['tipoUsuario']) && !empty($_SESSION['tipoUsuario']) && $_SESSION['tipoUsuario'] == 1):?>
-                    <a href=""><i class="fas fa-book-reader"></i>AVALIAR - </a>
+                    <a href="avaliar.php?cod=<?=$estrategia->getCod()?>"><i class="fas fa-book-reader"></i>AVALIAR - </a>
                     <a href="editar.php?cod=<?=$estrategia->getCod()?>"><i class="fas fa-edit"></i>EDITAR - </a>                        
                     <a href="excluir.php?cod=<?=$estrategia->getCod()?>"><i class="far fa-trash-alt"></i>EXCLUIR</a>
                   <?php else:?>

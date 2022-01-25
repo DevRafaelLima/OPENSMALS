@@ -41,6 +41,14 @@ if(empty($_SESSION['email'])){
         <div class="alert alert-warning" role="alert">
             Erro ao atualizar estrátegia.
         </div>
+    <?php elseif(isset($_GET['avall']) && $_GET['avall']=='success'):?>
+        <div class="alert alert-success" role="alert">
+            Estratégia avaliada com secesso.
+        </div>
+    <?php elseif(isset($_GET['avall']) && $_GET['avall']=='error'):?> 
+    <div class="alert alert-warning" role="alert">
+            Erro ao avaliar estrátegia.
+        </div>
     <?php endif ?>    
     <header class="header bg-dark">
         <ul class="nav justify-content-end  text-white">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 24-Jan-2022 às 21:41
+-- Tempo de geração: 25-Jan-2022 às 17:51
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.27
 
@@ -40,16 +40,17 @@ CREATE TABLE `tb_estrategias` (
   `referencias` text NOT NULL,
   `status_estrategia` int(11) DEFAULT NULL,
   `cod_usuario` int(11) DEFAULT NULL,
-  `preRequisito` text NOT NULL
+  `preRequisito` text NOT NULL,
+  `comentario` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `tb_estrategias`
 --
 
-INSERT INTO `tb_estrategias` (`cod`, `nome`, `qual_estrategia`, `principais_ganhos`, `organizar_alunos`, `etapas`, `implementar_estrutura`, `artigos`, `classificacao`, `referencias`, `status_estrategia`, `cod_usuario`, `preRequisito`) VALUES
-(1, 'Estratégia', 'Texto que explica qual é a estratégia.', 'Os principais ganhos para realizar essa estratégia', 'Maneiras de organizar os alunos', 'quais são as etapas', 'Tempo para aplicar a estratégia', 'Artigos relacionados a está estratégias', 'classificação desta estratégia', 'Referencias', 0, 1, 'Quais são os pre requisitos'),
-(3, 'Estratégia professor', 'uma estrategia qualquer', 'testes', 'testes', 'lafjlasdjf', 'alsdkjfladjs', 'rfljasdlfkjal', 'alsdkfjladks', 'falsdkfjaldfjs', 0, 2, 'fasdfjalsd');
+INSERT INTO `tb_estrategias` (`cod`, `nome`, `qual_estrategia`, `principais_ganhos`, `organizar_alunos`, `etapas`, `implementar_estrutura`, `artigos`, `classificacao`, `referencias`, `status_estrategia`, `cod_usuario`, `preRequisito`, `comentario`) VALUES
+(1, 'Estratégia', 'Texto que explica qual é a estratégia.', 'Os principais ganhos para realizar essa estratégia', 'Maneiras de organizar os alunos', 'quais são as etapas', 'Tempo para aplicar a estratégia', 'Artigos relacionados a está estratégias', 'classificação desta estratégia', 'Referencias', 3, 1, 'Quais são os pre requisitos', ''),
+(3, 'Estratégia professor', 'uma estrategia qualquer', 'testes', 'testes', 'lafjlasdjf', 'alsdkjfladjs', 'rfljasdlfkjal', 'alsdkfjladks', 'falsdkfjaldfjs', 1, 2, 'fasdfjalsd', '');
 
 -- --------------------------------------------------------
 
