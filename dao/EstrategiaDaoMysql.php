@@ -181,5 +181,130 @@ class EstrategiaDaoMysql implements EstrategiaDAO{
         }
         return $array;
     }
+    public function findAllAtivas(){
+        $array = array();
+        $sql = $this->conn->query("SELECT tb_estrategias.cod, tb_estrategias.nome FROM `tb_estrategias` WHERE tb_estrategias.status_estrategia = 1");
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetchAll();
+            foreach($dados as $item){
+                $e = new Estrategia();
+                $e->setCod($item['cod']);
+                $e->setNome($item['nome']);
+                $array[] = $e;
+            }
+        } 
+
+        return $array;
+    }
+    public function qualEstrategia($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.qual_estrategia FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setQualEstrategia($dados['qual_estrategia']);
+            return $estra;
+        }
+
+    }
+    public function principaisGanhos($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.principais_ganhos FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setPrincipaisGanhos($dados['principais_ganhos']);
+            return $estra;
+        }
+    }
+    public function organizarAlunos($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.organizar_alunos FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setOrganizarAlunos($dados['organizar_alunos']);
+            return $estra;
+        }
+    }
+    public function preRequisitos($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.preRequisito FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setPreRequisitos($dados['preRequisito']);
+            return $estra;
+        }
+    }
+    public function etapas($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.etapas FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setEtapas($dados['etapas']);
+            return $estra;
+        }
+    }
+    public function implementarEstrategia($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.implementar_estrutura FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setImplementarEstrategia($dados['implementar_estrutura']);
+            return $estra;
+        }
+    }   
+   
+    public function classificacao($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.classificacao FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setClassificacao($dados['classificacao']);
+            return $estra;
+        }
+    }
+    public function referencia($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.referencias FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setReferencia($dados['referencias']);
+            return $estra;
+        }
+    }
+    public function artigos($cod){
+        $sql = $this->conn->prepare("SELECT tb_estrategias.artigos FROM `tb_estrategias` WHERE tb_estrategias.cod = :cod");
+        $sql->bindValue(":cod", $cod);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $dados = $sql->fetch();
+            $estra = new Estrategia();
+            $estra->setArtigo($dados['artigos']);
+            return $estra;
+        }
+    }
 }
 ?>

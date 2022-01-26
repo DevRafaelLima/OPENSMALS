@@ -109,5 +109,15 @@ interface EstrategiaDAO{
     public function detele($id);
     public function findAllAvall();
     public function avaliar(Estrategia $e);
+    public function findAllAtivas();
+    public function qualEstrategia($cod);
+    public function principaisGanhos($cod);
+    public function organizarAlunos($cod);
+    public function preRequisitos($cod);
+    public function etapas($cod);
+    public function implementarEstrategia($cod);
+    public function classificacao($cod);
+    public function referencia($cod);
+    public function artigos($cod);
 }
 ?>

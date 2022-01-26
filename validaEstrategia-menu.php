@@ -1,7 +1,4 @@
 <?php
-
-?>
-<?php
 require("conexao.php");
 require("dao/EstrategiaDaoMysql.php");
 $conexao = new Conexao();
