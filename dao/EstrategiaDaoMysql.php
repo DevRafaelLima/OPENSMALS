@@ -306,5 +306,22 @@ class EstrategiaDaoMysql implements EstrategiaDAO{
             return $estra;
         }
     }
+    public function findEscolhendoEstrategia(){
+        $array = array();
+        $sql = $this->conn->query("SELECT cod, nome, qual_estrategia FROM tb_estrategias");
+        if($sql->rowCount() > 0){
+            
+            $dados = $sql->fetchAll();
+            foreach($dados as $item){
+                $ex = new Estrategia();
+                $ex->setCod($item['cod']);
+                $ex->setNome($item['nome']);
+                $ex->setQualEstrategia($item['qual_estrategia']);
+                $array[] = $ex;
+            }
+    
+        }
+        return $array;
+    }
 }
 ?>

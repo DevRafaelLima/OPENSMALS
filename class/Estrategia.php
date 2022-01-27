@@ -119,5 +119,6 @@ interface EstrategiaDAO{
     public function classificacao($cod);
     public function referencia($cod);
     public function artigos($cod);
+    public function findEscolhendoEstrategia();
 }
 ?>
