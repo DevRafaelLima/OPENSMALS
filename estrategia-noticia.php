@@ -60,8 +60,10 @@
         <div class="rigth">
          <div class="conteudo">
            <h1>Qual é a estratégia?</h1>
-           <?php $ql = $estrategiaDao->qualEstrategia($_GET['cod']);?>
-           <p class="lead"><?= $ql->getQualEstrategia();?></p>
+           
+             <?php $ql = $estrategiaDao->qualEstrategia($_GET['cod']);?>
+             <p class="lead"><?= $ql->getQualEstrategia();?></p>
+           
           </div>
         </div>
       </div>
@@ -198,7 +200,7 @@
                 <table class="table-p">
                   <thead>
                     <tr class="back">
-                      <th class="left">Univerdidade</th>
+                      <th class="left">Universidade</th>
                       <th>Curso</th>
                       <th>Componente</th>
                       <th class="right">Alunos</th>

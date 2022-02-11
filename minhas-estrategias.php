@@ -39,8 +39,8 @@ $estrategias = $estrategiaDao->findAllCod($_SESSION['cod']);
                     <a href="editar.php?cod=<?=$estrategia->getCod()?>"><i class="fas fa-edit"></i>EDITAR - </a>                        
                     <a href="excluir.php?cod=<?=$estrategia->getCod()?>"><i class="far fa-trash-alt"></i>EXCLUIR</a>
                   <?php else:?>
-                     EDITAR / EXCLUIR
-    
+                    <a href="editar.php?cod=<?=$estrategia->getCod()?>"><i class="fas fa-edit"></i>EDITAR - </a>                        
+                    <a href="excluir.php?cod=<?=$estrategia->getCod()?>"><i class="far fa-trash-alt"></i>EXCLUIR</a>    
                   <?php endif?>
           </td>
         </tr>

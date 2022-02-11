@@ -2,6 +2,10 @@ let conteudos = document.querySelector("#lado-esquerdo")
 let links = document.querySelectorAll("#lado-direito .nav a")
 let avaliacaoMinhaArea = document.querySelector("#avaliacao")
 
+/
+
+
+/*Controladores do formulário de alunos*/
 links.forEach(link => {
     link.onclick = (e) => {
         e.preventDefault()
@@ -33,9 +37,4 @@ function avaliacao(e){
     } else if(e === 'nao'){
         avaliacaoMinhaArea.style.display = "none"
     }
-}
-
-function addUniversidade(){
-    
-    
 }
