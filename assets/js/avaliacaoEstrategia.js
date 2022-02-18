@@ -15,37 +15,37 @@ let formAlunos = document.querySelector("formAluno")
 bntNextTurma.addEventListener("click", nextTurma, false)
 function nextTurma(){
     
-    // if(estrategia.value.length != 1){
-    //     alerta.innerHTML = `<div class="alert alert-warning" role="alert">
-    //         Por favor, identifique a estrategia que está sendo avaliada. 
-    //     </div>`
-    //     estrategia.focus()
-    //     return false
-    // }
-    // else if(nomeTurma.value.length < 2 ){
-    //     alerta.innerHTML = `<div class="alert alert-warning" role="alert">
-    //         Por favor, identifique a turma que está sendo avaliada. 
-    //     </div>`
-    //     nomeTurma.focus()
-    //     return false
-    // } else if(nomeUniversidade.value.length < 3){
-    //     alerta.innerHTML = `<div class="alert alert-warning" role="alert">
-    //         Por favor, Identifique a universidade.
-    //       </div>`
-    //     nomeUniversidade.focus()
-    //     return false
-    // } else if(nomeCurso.value.length < 2){
-    //     alerta.innerHTML = `<div class="alert alert-warning" role="alert">
-    //         Por favor, informe o nome do curso          </div>`
-    //     nomeCurso.focus()
-    //     return false
-    // } else if(nomeComponente.value.length < 2){
-    //     alerta.innerHTML = `<div class="alert alert-warning" role="alert">
-    //         Por favor, informe o nome do componente que foi aplicado a estrátegia!
-    //       </div>`
-    //     nomeComponente.focus()
-    //     return false
-    // }
+    if(estrategia.value.length != 1){
+        alerta.innerHTML = `<div class="alert alert-warning" role="alert">
+            Por favor, identifique a estrategia que está sendo avaliada. 
+        </div>`
+        estrategia.focus()
+        return false
+    }
+    else if(nomeTurma.value.length < 2 ){
+        alerta.innerHTML = `<div class="alert alert-warning" role="alert">
+            Por favor, identifique a turma que está sendo avaliada. 
+        </div>`
+        nomeTurma.focus()
+        return false
+    } else if(nomeUniversidade.value.length < 3){
+        alerta.innerHTML = `<div class="alert alert-warning" role="alert">
+            Por favor, Identifique a universidade.
+          </div>`
+        nomeUniversidade.focus()
+        return false
+    } else if(nomeCurso.value.length < 2){
+        alerta.innerHTML = `<div class="alert alert-warning" role="alert">
+            Por favor, informe o nome do curso          </div>`
+        nomeCurso.focus()
+        return false
+    } else if(nomeComponente.value.length < 2){
+        alerta.innerHTML = `<div class="alert alert-warning" role="alert">
+            Por favor, informe o nome do componente que foi aplicado a estrátegia!
+          </div>`
+        nomeComponente.focus()
+        return false
+    }
     formAluno.style.display = `block`
    
 }
@@ -56,7 +56,7 @@ function nextTurma(){
 function gerarAlunos(){
     let alertAlunos = document.querySelector('#alertAlunos')
     let questionario = document.querySelector("#questionario")
-    console.log(alertAlunos)
+    
     let divAlunos = document.querySelector('#alunos')
     let nAluno = document.querySelector("#numeroAlunos")
     if(nAluno.value.length < 0){
@@ -89,9 +89,10 @@ function gerarAlunos(){
 
             let areaFormulario = document.createElement('div')
             areaFormulario.classList.add('col-10')
-            for(let i=0; i<8; i++){
+            for(let y=0; y<8; y++){
                 let linhaRowItem = document.createElement('div')
                 linhaRowItem.classList.add('row')
+                linhaRowItem.classList.add('itens')
         
                 
 
@@ -123,7 +124,7 @@ function gerarAlunos(){
                         let inputConcordoFortemente = document.createElement('input')
                         inputConcordoFortemente.classList.add('form-check-input')
                         inputConcordoFortemente.setAttribute('type', 'radio')
-                        inputConcordoFortemente.setAttribute('name', 'avaliacao')
+                        inputConcordoFortemente.setAttribute('name', `avaliacao${i}`)
                         inputConcordoFortemente.setAttribute('value', 5)
 
                         divConcordoFortemente.append(labelConfordoFortemente)
@@ -146,7 +147,7 @@ function gerarAlunos(){
                         let inputConcordo = document.createElement('input')
                         inputConcordo.classList.add('form-check-input')
                         inputConcordo.setAttribute('type', 'radio')
-                        inputConcordo.setAttribute('name', 'avaliacao')
+                        inputConcordo.setAttribute('name', `avaliacao${i}`)
                         inputConcordo.setAttribute('value', 4)
 
                         divConcordo.append(labelConfordo)
@@ -171,7 +172,7 @@ function gerarAlunos(){
                         let inputNeutro = document.createElement('input')
                         inputNeutro.classList.add('form-check-input')
                         inputNeutro.setAttribute('type', 'radio')
-                        inputNeutro.setAttribute('name', 'avaliacao')
+                        inputNeutro.setAttribute('name', `avaliacao${i}`)
                         inputNeutro.setAttribute('value', 3)
 
                         divNeutro.append(labelNeutro)
@@ -194,7 +195,7 @@ function gerarAlunos(){
                         let inputDiscordo = document.createElement('input')
                         inputDiscordo.classList.add('form-check-input')
                         inputDiscordo.setAttribute('type', 'radio')
-                        inputDiscordo.setAttribute('name', 'avaliacao')
+                        inputDiscordo.setAttribute('name', `avaliacao${i}`)
                         inputDiscordo.setAttribute('value', 2)
 
                         divDiscordo.append(labelDiscordo)
@@ -218,7 +219,7 @@ function gerarAlunos(){
                         let inputDiscordoFortemente = document.createElement('input')
                         inputDiscordoFortemente.classList.add('form-check-input')
                         inputDiscordoFortemente.setAttribute('type', 'radio')
-                        inputDiscordoFortemente.setAttribute('name', 'avaliacao')
+                        inputDiscordoFortemente.setAttribute('name', `avaliacao${i}`)
                         inputDiscordoFortemente.setAttribute('value', 1)
 
                         divDiscordoFortemente.append(labelDiscordoFortemente)

@@ -107,46 +107,9 @@ $allEstrategias = $estrategiaDao->findAllAtivas();
               </div>
               
               <div id="alunos">
-                   <div class="row itens">
-                       <div class="col-2">
-                           aluno1
-                       </div>
-                       <div class="col-10">
-                           <div class="row">
-                                <div class="col-2 item">
-                                    <input class="form-control" type="text" placeholder="item1" readonly>
-                                </div>
-                                <div class="col text-center item">
-                                    <label for="">Concordo Fortemente</label>
-                                    <input class="form-check-input" type="radio" name="avaliacao" id="exampleRadios1" value="opcao1">
-                                </div>
-                                <div class="col text-center item">
-                                    <label for="">Fortemente</label>
-                                    <input class="form-check-input" type="radio" name="avaliacao" id="exampleRadios1" value="opcao1">
-                                </div>
-                                <div class="col text-center item">
-                                    <label for="">Neutro</label>
-                                    <input class="form-check-input" type="radio" name="avaliacao" id="exampleRadios1" value="opcao1">
-                                </div>
-                                <div class="col text-center item">
-                                    <Label>Discordo</Label>
-                                    <input class="form-check-input" type="radio" name="avaliacao" id="exampleRadios1" value="opcao1">
-                                </div>
-                                <div class="col text-center item">
-                                    <label for="">Discordo Fortemente</label>
-                                    <input class="form-check-input" type="radio" name="avaliacao" id="exampleRadios1" value="opcao1">
-                                </div>
-                           </div>
-                            
-
-
-                       </div>
-                   </div>
-              </div>
-                
-                <button class="btn btn-primary" type="submit">Avaliar</button>
-      
-          </div>
+                  
+             </div>
+                  <button class="btn btn-primary" type="submit">Avaliar</button>
           <!--fim info alunos-->
       </form>
   </div>

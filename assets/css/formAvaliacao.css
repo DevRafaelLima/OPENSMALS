@@ -1,7 +1,11 @@
 #formAluno{
-    display: block;
+    display: none;
+}
+#btn_avaliar{
+    display: none;
 }
 .item {
+    margin-top: 10px;
     height: 50px;
     display: flex;
 }
