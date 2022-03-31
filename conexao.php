@@ -19,7 +19,7 @@ class Conexao{
 				"$this->user",
 				"$this->pass"
 			);
-
+				
 			return $bd;
 		} catch(PDOException $e){
 			

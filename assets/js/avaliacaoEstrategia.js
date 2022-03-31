@@ -8,6 +8,8 @@ let nomeComponente = document.querySelector("#turma #nomeComponente")
 let pontosPositivos = document.querySelector(" #turma#pontosPositivos")
 let pontosNegativos = document.querySelector("#turma #pontosNegativos")
 let alerta = document.querySelector("#turma #alerta")
+let turmaName = document.querySelector("#nomeTurma")
+let selectTurma = document.querySelector("#turmaSelect")
 
 /*Controladores div alunos*/
 let formAlunos = document.querySelector("formAluno")
@@ -15,20 +17,21 @@ let formAlunos = document.querySelector("formAluno")
 bntNextTurma.addEventListener("click", nextTurma, false)
 function nextTurma(){
     
-    if(estrategia.value.length != 1){
+    /* if(estrategia.value.length != 1){
         alerta.innerHTML = `<div class="alert alert-warning" role="alert">
             Por favor, identifique a estrategia que está sendo avaliada. 
         </div>`
         estrategia.focus()
         return false
     }
-    else if(nomeTurma.value.length < 2 ){
+    /* else if(nomeTurma.value.length < 2 ){
         alerta.innerHTML = `<div class="alert alert-warning" role="alert">
             Por favor, identifique a turma que está sendo avaliada. 
         </div>`
         nomeTurma.focus()
         return false
-    } else if(nomeUniversidade.value.length < 3){
+    }
+     else if(nomeUniversidade.value.length < 3){
         alerta.innerHTML = `<div class="alert alert-warning" role="alert">
             Por favor, Identifique a universidade.
           </div>`
@@ -45,15 +48,13 @@ function nextTurma(){
           </div>`
         nomeComponente.focus()
         return false
-    }
+    } */
     formAluno.style.display = `block`
    
 }
 
-    /*
-            <input type="radio" class="form-check-input" name="avaliacao" id="discordoFortemente" value="1">
-*/
 function gerarAlunos(){
+    let btn_avaliar = document.querySelector('#btn_avaliar')
     let alertAlunos = document.querySelector('#alertAlunos')
     let questionario = document.querySelector("#questionario")
     
@@ -103,7 +104,7 @@ function gerarAlunos(){
                 let inputLinhaRow = document.createElement('input')
                 inputLinhaRow.classList.add('form-control')
                 inputLinhaRow.setAttribute('type', 'text')
-                inputLinhaRow.setAttribute('placeholder', `item${i+1}`)
+                inputLinhaRow.setAttribute('placeholder', `item${y+1}`)
                 inputLinhaRow.setAttribute('readonly', 'readonly')
                 areaItem.append(inputLinhaRow)
 
@@ -124,7 +125,7 @@ function gerarAlunos(){
                         let inputConcordoFortemente = document.createElement('input')
                         inputConcordoFortemente.classList.add('form-check-input')
                         inputConcordoFortemente.setAttribute('type', 'radio')
-                        inputConcordoFortemente.setAttribute('name', `avaliacao${i}`)
+                        inputConcordoFortemente.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputConcordoFortemente.setAttribute('value', 5)
 
                         divConcordoFortemente.append(labelConfordoFortemente)
@@ -147,7 +148,7 @@ function gerarAlunos(){
                         let inputConcordo = document.createElement('input')
                         inputConcordo.classList.add('form-check-input')
                         inputConcordo.setAttribute('type', 'radio')
-                        inputConcordo.setAttribute('name', `avaliacao${i}`)
+                        inputConcordo.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputConcordo.setAttribute('value', 4)
 
                         divConcordo.append(labelConfordo)
@@ -172,7 +173,7 @@ function gerarAlunos(){
                         let inputNeutro = document.createElement('input')
                         inputNeutro.classList.add('form-check-input')
                         inputNeutro.setAttribute('type', 'radio')
-                        inputNeutro.setAttribute('name', `avaliacao${i}`)
+                        inputNeutro.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputNeutro.setAttribute('value', 3)
 
                         divNeutro.append(labelNeutro)
@@ -195,7 +196,7 @@ function gerarAlunos(){
                         let inputDiscordo = document.createElement('input')
                         inputDiscordo.classList.add('form-check-input')
                         inputDiscordo.setAttribute('type', 'radio')
-                        inputDiscordo.setAttribute('name', `avaliacao${i}`)
+                        inputDiscordo.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputDiscordo.setAttribute('value', 2)
 
                         divDiscordo.append(labelDiscordo)
@@ -219,7 +220,7 @@ function gerarAlunos(){
                         let inputDiscordoFortemente = document.createElement('input')
                         inputDiscordoFortemente.classList.add('form-check-input')
                         inputDiscordoFortemente.setAttribute('type', 'radio')
-                        inputDiscordoFortemente.setAttribute('name', `avaliacao${i}`)
+                        inputDiscordoFortemente.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputDiscordoFortemente.setAttribute('value', 1)
 
                         divDiscordoFortemente.append(labelDiscordoFortemente)
@@ -262,7 +263,7 @@ function gerarAlunos(){
 
             let areaFormulario = document.createElement('div')
             areaFormulario.classList.add('col-10')
-            for(let i=0; i<10; i++){
+            for(let y=0; y<10; y++){
                 let linhaRowItem = document.createElement('div')
                 linhaRowItem.classList.add('row')
         
@@ -275,7 +276,7 @@ function gerarAlunos(){
                 let inputLinhaRow = document.createElement('input')
                 inputLinhaRow.classList.add('form-control')
                 inputLinhaRow.setAttribute('type', 'text')
-                inputLinhaRow.setAttribute('placeholder', `item${i+1}`)
+                inputLinhaRow.setAttribute('placeholder', `item${y+1}`)
                 inputLinhaRow.setAttribute('readonly', 'readonly')
                 areaItem.append(inputLinhaRow)
 
@@ -296,7 +297,7 @@ function gerarAlunos(){
                         let inputConcordoFortemente = document.createElement('input')
                         inputConcordoFortemente.classList.add('form-check-input')
                         inputConcordoFortemente.setAttribute('type', 'radio')
-                        inputConcordoFortemente.setAttribute('name', 'avaliacao')
+                        inputConcordoFortemente.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputConcordoFortemente.setAttribute('value', 5)
 
                         divConcordoFortemente.append(labelConfordoFortemente)
@@ -319,7 +320,7 @@ function gerarAlunos(){
                         let inputConcordo = document.createElement('input')
                         inputConcordo.classList.add('form-check-input')
                         inputConcordo.setAttribute('type', 'radio')
-                        inputConcordo.setAttribute('name', 'avaliacao')
+                        inputConcordo.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputConcordo.setAttribute('value', 4)
 
                         divConcordo.append(labelConfordo)
@@ -344,7 +345,7 @@ function gerarAlunos(){
                         let inputNeutro = document.createElement('input')
                         inputNeutro.classList.add('form-check-input')
                         inputNeutro.setAttribute('type', 'radio')
-                        inputNeutro.setAttribute('name', 'avaliacao')
+                        inputNeutro.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputNeutro.setAttribute('value', 3)
 
                         divNeutro.append(labelNeutro)
@@ -367,7 +368,7 @@ function gerarAlunos(){
                         let inputDiscordo = document.createElement('input')
                         inputDiscordo.classList.add('form-check-input')
                         inputDiscordo.setAttribute('type', 'radio')
-                        inputDiscordo.setAttribute('name', 'avaliacao')
+                        inputDiscordo.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputDiscordo.setAttribute('value', 2)
 
                         divDiscordo.append(labelDiscordo)
@@ -391,7 +392,7 @@ function gerarAlunos(){
                         let inputDiscordoFortemente = document.createElement('input')
                         inputDiscordoFortemente.classList.add('form-check-input')
                         inputDiscordoFortemente.setAttribute('type', 'radio')
-                        inputDiscordoFortemente.setAttribute('name', 'avaliacao')
+                        inputDiscordoFortemente.setAttribute('name', `avaliacao-Aluno${i}-Item${y}`)
                         inputDiscordoFortemente.setAttribute('value', 1)
 
                         divDiscordoFortemente.append(labelDiscordoFortemente)
@@ -411,7 +412,19 @@ function gerarAlunos(){
             //dentro dessa de linha de item fazer o for até 5
             divRow.append(areaFormulario)
         }
+       
     }
-
+    btn_avaliar.style.display = `block`
     
+}
+
+function sim(){
+   
+    turmaName.style.display = 'none'
+    selectTurma.style.display =  'block'
+   
+}
+function nao(){
+    turmaName.style.display = 'block'
+    selectTurma.style.display =  'none'
 }

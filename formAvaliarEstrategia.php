@@ -1,9 +1,14 @@
 <?php
 require ("conexao.php");
 require ("dao/EstrategiaDaoMysql.php");
+require ("dao/TurmaDaoMysql.php");
+
 $conn = new Conexao();
 $estrategiaDao = new EstrategiaDaoMysql($conn);
+$turmaDao = new TurmaDaoMysql($conn);
 $allEstrategias = $estrategiaDao->findAllAtivas();
+$allTurmas = $turmaDao->findAllCod($_SESSION['cod']);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,12 +33,12 @@ $allEstrategias = $estrategiaDao->findAllAtivas();
           <!--info do professor-->
           <div class="form-group">
               <label for="prof.">professor</label>
-              <input type="hidden" class="form-control" value="01">
-              <input type="text" class="form-control" value="nome do professor" readonly>
+              <input type="hidden" name="cod" class="form-control" value="<?=$_SESSION['cod']?>">
+              <input type="text" name="professor" class="form-control" value="<?=$_SESSION['nome']?>" readonly>
           </div>
           <div class="form-group">
               <label for="">Estratégia que será avaliada</label>
-              <select name="" id="estrategia" class="form-control">
+              <select name="estrategia" id="estrategia" class="form-control">
                   <option value=""></option>
                   <?php foreach($allEstrategias as $item):?>
                     <option value="<?=$item->getCod()?>"><?=$item->getNome()?></option>
@@ -45,24 +50,56 @@ $allEstrategias = $estrategiaDao->findAllAtivas();
           <div id="turma">
               <div id="alerta"></div>
               <h4>Informações da turma</h4>
-              <div class="form-group">
-                  <label for="nomeTurma">Nome:</label>
-                  <input type="text" class="form-control" id="nomeTurma">
+
+              <div>
+                  A turma que você está preste a avaliar já foi avaliada alguma vez?
+
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="sim()" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1">
+                        <label class="form-check-label" for="exampleRadios1">
+                            Sim
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="nao()" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Não
+                        </label>
+                    </div>
+                    
+
               </div>
+
+              <div class="form-group" id="nomeTurma">
+                  <label for="nomeTurma">Nome:</label>
+                  <input type="text" class="form-control" name="turmaName">
+              </div>
+
+              <div class="form-group" id="turmaSelect">
+                <label for="">Selecine a turma</label>
+                <select name="turmaNameSelect" class="form-control">
+                    <option value=""></option>
+                    <?php foreach($allTurmas as $turma):?>
+                        <option value="<?=$turma->getCod()?>"><?=$turma->getNome()?></option>
+                    <?php endforeach;?>  
+                    
+                </select>
+             </div>
       
               <div class="form-group">
                   <label for="universidade">universidade</label>
-                  <input type="text" class="form-control" id="nomeUniversidade">
+                  <input type="text" class="form-control" id="nomeUniversidade" name="universidade">
               </div>
       
               <div class="form-group">
                   <label for="curso">Curso</label>
-                  <input type="text" class="form-control" id="nomeCurso">
+                  <input type="text" class="form-control" id="nomeCurso" name="nameCurso">
               </div>
               
               <div class="form-group">
                   <label for="componente">Componente: </label>
-                  <input type="text" class="form-control" id="nomeComponente">
+                  <input type="text" class="form-control" id="nomeComponente" name="componente">
               </div>
               <div class="form-group">
                   <label for="pontosPositivos">Pontos positivos: </label>
@@ -92,7 +129,7 @@ $allEstrategias = $estrategiaDao->findAllAtivas();
                       <label for="questionario" class="col-1 col-form-label">Questionário aplicado</label>
                       <div class="col-3">
 
-                          <select name="querionario" id="questionario" class="form-control">
+                          <select name="questionario" id="questionario" class="form-control">
                               <option value=""></option>
                               <option value="1">DIMENSÃO FATUAL DA TAXONOMIA DE BLOOM</option>
                               <option value="2">ATITUDES DOS ALUNOS SOBRE AS ESTRATÉGIAS ATIVAS DE APRENDIZAGEM</option>
@@ -109,7 +146,7 @@ $allEstrategias = $estrategiaDao->findAllAtivas();
               <div id="alunos">
                   
              </div>
-                  <button class="btn btn-primary" type="submit">Avaliar</button>
+                  <button class="btn btn-primary" id="btn_avaliar" type="submit">Avaliar</button>
           <!--fim info alunos-->
       </form>
   </div>

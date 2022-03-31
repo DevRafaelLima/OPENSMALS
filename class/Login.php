@@ -55,6 +55,7 @@ classe responsável em trabalhar com os métodos relacionado à login.
 				$_SESSION['email'] = $dados->email;
 				$_SESSION['tipoUsuario'] = $dados->tipoUsuario;
 				$_SESSION['cod'] = $dados->cod;
+				$_SESSION['nome'] = $dados->nome;
 			 	return true;
 			 } else {
 			 	return false;

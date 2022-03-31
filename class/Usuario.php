@@ -7,6 +7,7 @@ já no set de senha eu criptografo em MD5.
 class Usuario {
 	
 	//atibutos
+	private $cod;
 	private $email;
 	private $senha;
 
@@ -18,6 +19,8 @@ class Usuario {
 	}
 	
 	//métodos acessores e modificadores
+	public function setCod($x){$this->cod = $x;}
+	public function getCod(){return $this->cod;}
 	public function setEmail($x){
 		$this->email = strtolower(trim($x));
 	} 
@@ -32,5 +35,9 @@ class Usuario {
 	}
 
 
+}
+
+interface UsuarioDao{
+public function findAll();
 }
 ?>

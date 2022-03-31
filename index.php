@@ -31,7 +31,8 @@
                   <div class="container-fluid">
                     <div class="row"><!--row-->
                       <div class="col item-texto"><!--col-->
-                        imagem
+                        <img src="assets/img/logo-completa.png" class="img-fluid" alt="">
+                        
                       </div><!--fim col-->
                       <div class="col item-img"><!--col-->
                         conteudo

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,6 +20,14 @@
     <?php
       require('pages/header.php');
       $x = $estrategiaDao->findById($_GET['cod']);
+      require ("dao/GerarGraficoDao.php");
+      require ("dao/TurmaDaoMysql.php");
+      $turmasDao = new TurmaDaoMysql($conexao);
+      $graficoDao = new GerarGraficoDao($conexao);
+      $grafico = $graficoDao->graficoGeral1($_GET['cod']);
+      $grafico2 = $graficoDao->graficoGeral2($_GET['cod']);
+      $turmas = $turmasDao->findAll($_GET['cod']);
+      
     ?>
 
     <div id="AprendizagemSemelhantes">
@@ -207,43 +216,23 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="linha">
-                      <td class="left">Universidade Federal do Amazonas</td>
-                      <td>Ciência da Computação</td>
-                      <td>Introdução à Engenharia de Software</td>
-                      <td class="right">28 alunos</td>
-                    </tr>
+                    <?php foreach($turmas as $turma):?>
+                      <tr class="linha">
+                        <td class="left"><?=$turma->getUniversidade()?></td>
+                        <td><?=$turma->getCurso()?></td>
+                        <td><?=$turma->getComponente()?></td>
+                        <td class="right"><?=$turma->getNEstudantes()?> alunos</td>
+                      </tr>
+                    <?php endforeach;?>
                   </tbody>
                 </table>
 
               </div>
-              <!--
-              <table class="table">
-                <thead class="thead-dark">
-                  <tr class="paddind-right">
-                    <th scope="col">Univerdidade</th>
-                    <th scope="col">Principal</th>
-                    <th scope="col">Nome do Curso</th>
-                    <th scope="col">Alunos</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Universidade Federal do Amazonas</td>
-                    <td>Ciência da Computação</td>
-                    <td>Introdução à Engenharia de Software</td>
-                    <td>28 alunos</td>
-                  </tr>
-                </tbody>
-              </table>
-              -->
+             
               <div class="row">
                 <div class="col pontos-positivos">
                   <h4>Pontos positivos</h4>
-                  <!--
-                  <div class="imagem">
-                    <img src="assets/img/positivo.png" alt="">
-                  </div>-->
+             
                   <p><b>A estratégia apoia o aluno durante a modelagem</b></p>
                   <ul>
                     <li>O método torna possível abstrair melhor o problema</li>
@@ -252,10 +241,6 @@
                 </div>
                 <div class="col pontos-negativos">
                   <h4>Pontos negativos</h4>
-                  <!--
-                  <div class="imagem">
-                    <img src="assets/img/negativo.png" alt="">
-                  </div>-->
                   <p><b>A estratégia não apóia o aluno durante a modelagem</b></p>
                   <ul>
                     <li>A estratégia não permite ao aluno abstrair novos cenários</li>
@@ -269,16 +254,334 @@
                 <h3>PERCEPÇÃO DOS ALUNOS SOBRE A ESTRATÉGIA </h3>
                 <div class="item">
                   <h4>DIMENSÃO FATUAL DA TAXONOMIA DE BLOOM</h4>
-                  
-                  <div class="imagem">
+                  <style>
+                    #grafico span {
+                        height: 10px; 
+                        width: 10px; 
+                        border-radius: 5px;
+                        display: inline-block;
+                    }
+                </style>
+                  <!-- <div class="imagem">
                     <img src="assets/img/bloom.png" alt="">
+                  </div> -->
+
+                  <div class="container-fluid" id="grafico">
+        
+                      <div class="row">
+                          <div class="col">
+                              <p class="lead text-success">Concordo Fortemente <span class="bg-success"></span></p>
+                          </div>
+                          <div class="col">
+                              <p class="lead text-info">Concordo <span class="bg-info"></span></p>
+                          </div>
+                          <div class="col">
+                              <p class="lead text-secondary">Neutro <span class="bg-secondary"></span></p>
+                          </div>
+                          <div class="col">
+                              <p class="lead text-warning">Discordo <span class="bg-warning"></span></p>
+                          </div>
+                          <div class="col">
+                              <p class="lead text-danger">Discordo Fortemente <span class="bg-danger"></span></p>
+                          </div>
+                          <div class="w-100"></div>
+                          <div class="col-2">
+                              <p class="lead">Item 1</p>
+                          </div>
+                          <div class="col">
+                          
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico->getQ1ConcordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ1ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ1ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico->getQ1Concordo()?>%" aria-valuenow="<?=$grafico->getQ1Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ1Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico->getQ1Neutro()?>%" aria-valuenow="<?=$grafico->getQ1Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ1Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico->getQ1Discordo()?>%" aria-valuenow="<?=$grafico->getQ1Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ1Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico->getQ1DiscordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ1DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ1DiscordoFortemente()?></div>
+                              </div>
+                          </div>
+                  
+                          <div class="w-100"></div>
+                  
+                          <div class="col-2">
+                              <p class="lead">Item 2</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico->getQ2ConcordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ2ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ2ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico->getQ2Concordo()?>%" aria-valuenow="<?=$grafico->getQ2Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ2Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico->getQ2Neutro()?>%" aria-valuenow="<?=$grafico->getQ2Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ2Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico->getQ2Discordo()?>%" aria-valuenow="<?=$grafico->getQ2Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ2Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico->getQ2DiscordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ2DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ2DiscordoFortemente()?></div>
+                              </div>
+                          </div>
+                          <div class="w-100"></div>
+                  
+                          <div class="col-2">
+                              <p class="lead">Item 3</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico->getQ3ConcordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ3ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ3ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico->getQ3Concordo()?>%" aria-valuenow="<?=$grafico->getQ3Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ3Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico->getQ3Neutro()?>%" aria-valuenow="<?=$grafico->getQ3Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ3Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico->getQ3Discordo()?>%" aria-valuenow="<?=$grafico->getQ3Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ3Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico->getQ3DiscordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ3DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ3DiscordoFortemente()?>%</div>
+                              </div>
+                          </div>
+                          <div class="w-100"></div>
+                  
+                          <div class="col-2">
+                              <p class="lead">Item 4</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico->getQ4ConcordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ4ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ4ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico->getQ4Concordo()?>%" aria-valuenow="<?=$grafico->getQ4Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ4Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico->getQ4Neutro()?>%" aria-valuenow="<?=$grafico->getQ4Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ4Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico->getQ4Discordo()?>%" aria-valuenow="<?=$grafico->getQ4Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ4Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico->getQ4DiscordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ4DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ4DiscordoFortemente()?>%</div>
+                              </div>
+                          </div>
+                          <div class="w-100"></div>
+                  
+                          <div class="col-2">
+                              <p class="lead">Item 5</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico->getQ5ConcordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ5ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ5ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico->getQ5Concordo()?>%" aria-valuenow="<?=$grafico->getQ5Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ5Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico->getQ5Neutro()?>%" aria-valuenow="<?=$grafico->getQ5Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ5Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico->getQ5Discordo()?>%" aria-valuenow="<?=$grafico->getQ5Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ5Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico->getQ5DiscordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ5DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ5DiscordoFortemente()?>%</div>
+                              </div>
+                          </div>
+                          <div class="w-100"></div>
+                  
+                          <div class="col-2">
+                              <p class="lead">Item 6</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico->getQ6ConcordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ6ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ6ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico->getQ6Concordo()?>%" aria-valuenow="<?=$grafico->getQ6Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ6Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico->getQ6Neutro()?>%" aria-valuenow="<?=$grafico->getQ6Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ6Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico->getQ6Discordo()?>%" aria-valuenow="<?=$grafico->getQ6Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ6Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico->getQ6DiscordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ6DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ6DiscordoFortemente()?>%</div>
+                              </div>
+                          </div>
+                          <div class="w-100"></div>
+                  
+                          <div class="col-2">
+                              <p class="lead">Item 7</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico->getQ7ConcordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ7ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ7ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico->getQ7Concordo()?>%" aria-valuenow="<?=$grafico->getQ7Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ7Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico->getQ7Neutro()?>%" aria-valuenow="<?=$grafico->getQ7Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ7Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico->getQ7Discordo()?>%" aria-valuenow="<?=$grafico->getQ7Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ7Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico->getQ7DiscordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ7DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ7DiscordoFortemente()?>%</div>
+                              </div>
+                          </div>
+                          <div class="w-100"></div>
+                  
+                          <div class="col-2">
+                              <p class="lead">Item 8</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico->getQ8ConcordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ8ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ8ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico->getQ8Concordo()?>%" aria-valuenow="<?=$grafico->getQ8Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ8Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico->getQ8Neutro()?>%" aria-valuenow="<?=$grafico->getQ8Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ8Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico->getQ8Discordo()?>%" aria-valuenow="<?=$grafico->getQ8Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ8Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico->getQ8DiscordoFortemente()?>%" aria-valuenow="<?=$grafico->getQ8DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico->getQ8DiscordoFortemente()?>%</div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
+
+
                 </div>
                 <div class="item">
                   <h4>ATITUDES DOS ALUNOS SOBRE AS ESTRATÉGIAS ATIVAS DE APRENDIZAGEM</h4>
-                  <div class="imagem">
+                  <!-- <div class="imagem">
                     <img src="assets/img/atitudes.png" alt="">
-                  </div>
+                  </div> -->
+
+
+                  <div class="container-fluid" id="grafico">
+        
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead text-success">Concordo Fortemente <span class="bg-success"></span></p>
+                        </div>
+                        <div class="col">
+                            <p class="lead text-info">Concordo <span class="bg-info"></span></p>
+                        </div>
+                        <div class="col">
+                            <p class="lead text-secondary">Neutro <span class="bg-secondary"></span></p>
+                        </div>
+                        <div class="col">
+                            <p class="lead text-warning">Discordo <span class="bg-warning"></span></p>
+                        </div>
+                        <div class="col">
+                            <p class="lead text-danger">Discordo Fortemente <span class="bg-danger"></span></p>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-2">
+                            <p class="lead">Item 1</p>
+                        </div>
+                        <div class="col">
+                        
+                            <div class="progress" style="height: 30px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ1ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ1ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ1ConcordoFortemente()?>%</div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ1Concordo()?>%" aria-valuenow="<?=$grafico2->getQ1Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ1Concordo()?>%</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ1Neutro()?>%" aria-valuenow="<?=$grafico2->getQ1Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ1Neutro()?>%</div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ1Discordo()?>%" aria-valuenow="<?=$grafico2->getQ1Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ1Discordo()?>%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ1DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ1DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ1DiscordoFortemente()?></div>
+                            </div>
+                        </div>
+                
+                        <div class="w-100"></div>
+                
+                        <div class="col-2">
+                            <p class="lead">Item 2</p>
+                        </div>
+                        <div class="col">
+                            <div class="progress" style="height: 30px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ2ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ2ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ2ConcordoFortemente()?>%</div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ2Concordo()?>%" aria-valuenow="<?=$grafico2->getQ2Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ2Concordo()?>%</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ2Neutro()?>%" aria-valuenow="<?=$grafico2->getQ2Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ2Neutro()?>%</div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ2Discordo()?>%" aria-valuenow="<?=$grafico2->getQ2Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ2Discordo()?>%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ2DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ2DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ2DiscordoFortemente()?></div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                
+                        <div class="col-2">
+                            <p class="lead">Item 3</p>
+                        </div>
+                        <div class="col">
+                            <div class="progress" style="height: 30px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ3ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ3ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ3ConcordoFortemente()?>%</div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ3Concordo()?>%" aria-valuenow="<?=$grafico2->getQ3Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ3Concordo()?>%</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ3Neutro()?>%" aria-valuenow="<?=$grafico2->getQ3Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ3Neutro()?>%</div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ3Discordo()?>%" aria-valuenow="<?=$grafico2->getQ3Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ3Discordo()?>%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ3DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ3DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ3DiscordoFortemente()?>%</div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                
+                        <div class="col-2">
+                            <p class="lead">Item 4</p>
+                        </div>
+                        <div class="col">
+                            <div class="progress" style="height: 30px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ4ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ4ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ4ConcordoFortemente()?>%</div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ4Concordo()?>%" aria-valuenow="<?=$grafico2->getQ4Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ4Concordo()?>%</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ4Neutro()?>%" aria-valuenow="<?=$grafico2->getQ4Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ4Neutro()?>%</div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ4Discordo()?>%" aria-valuenow="<?=$grafico2->getQ4Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ4Discordo()?>%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ4DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ4DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ4DiscordoFortemente()?>%</div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                
+                        <div class="col-2">
+                            <p class="lead">Item 5</p>
+                        </div>
+                        <div class="col">
+                            <div class="progress" style="height: 30px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ5ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ5ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ5ConcordoFortemente()?>%</div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ5Concordo()?>%" aria-valuenow="<?=$grafico2->getQ5Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ5Concordo()?>%</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ5Neutro()?>%" aria-valuenow="<?=$grafico2->getQ5Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ5Neutro()?>%</div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ5Discordo()?>%" aria-valuenow="<?=$grafico2->getQ5Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ5Discordo()?>%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ5DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ5DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ5DiscordoFortemente()?>%</div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                
+                        <div class="col-2">
+                            <p class="lead">Item 6</p>
+                        </div>
+                        <div class="col">
+                            <div class="progress" style="height: 30px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ6ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ6ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ6ConcordoFortemente()?>%</div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ6Concordo()?>%" aria-valuenow="<?=$grafico2->getQ6Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ6Concordo()?>%</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ6Neutro()?>%" aria-valuenow="<?=$grafico2->getQ6Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ6Neutro()?>%</div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ6Discordo()?>%" aria-valuenow="<?=$grafico2->getQ6Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ6Discordo()?>%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ6DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ6DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ6DiscordoFortemente()?>%</div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                
+                        <div class="col-2">
+                            <p class="lead">Item 7</p>
+                        </div>
+                        <div class="col">
+                            <div class="progress" style="height: 30px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ7ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ7ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ7ConcordoFortemente()?>%</div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ7Concordo()?>%" aria-valuenow="<?=$grafico2->getQ7Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ7Concordo()?>%</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ7Neutro()?>%" aria-valuenow="<?=$grafico2->getQ7Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ7Neutro()?>%</div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ7Discordo()?>%" aria-valuenow="<?=$grafico2->getQ7Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ7Discordo()?>%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ7DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ7DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ7DiscordoFortemente()?>%</div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                
+                        <div class="col-2">
+                            <p class="lead">Item 8</p>
+                        </div>
+                        <div class="col">
+                            <div class="progress" style="height: 30px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ8ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ8ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ8ConcordoFortemente()?>%</div>
+                                <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ8Concordo()?>%" aria-valuenow="<?=$grafico2->getQ8Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ8Concordo()?>%</div>
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ8Neutro()?>%" aria-valuenow="<?=$grafico2->getQ8Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ8Neutro()?>%</div>
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ8Discordo()?>%" aria-valuenow="<?=$grafico2->getQ8Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ8Discordo()?>%</div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ8DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ8DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ8DiscordoFortemente()?>%</div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+
+
+                        <div class="col-2">
+                          <p class="lead">Item 9</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ9ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ9ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ9ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ9Concordo()?>%" aria-valuenow="<?=$grafico2->getQ9Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ9Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ9Neutro()?>%" aria-valuenow="<?=$grafico2->getQ9Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ9Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ9Discordo()?>%" aria-valuenow="<?=$grafico2->getQ9Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ9Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ9DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ9DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ9DiscordoFortemente()?>%</div>
+                              </div>
+                          </div>
+                          <div class="w-100"></div>
+
+                          <div class="col-2">
+                              <p class="lead">Item 10</p>
+                          </div>
+                          <div class="col">
+                              <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: <?=$grafico2->getQ10ConcordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ10ConcordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ10ConcordoFortemente()?>%</div>
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: <?=$grafico2->getQ10Concordo()?>%" aria-valuenow="<?=$grafico2->getQ10Concordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ10Concordo()?>%</div>
+                                  <div class="progress-bar bg-secondary" role="progressbar" style="width: <?=$grafico2->getQ10Neutro()?>%" aria-valuenow="<?=$grafico2->getQ10Neutro()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ10Neutro()?>%</div>
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: <?=$grafico2->getQ10Discordo()?>%" aria-valuenow="<?=$grafico2->getQ10Discordo()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ10Discordo()?>%</div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: <?=$grafico2->getQ10DiscordoFortemente()?>%" aria-valuenow="<?=$grafico2->getQ10DiscordoFortemente()?>" aria-valuemin="0" aria-valuemax="100"><?=$grafico2->getQ10DiscordoFortemente()?>%</div>
+                              </div>
+                          </div>
+
+
+
+
+                    </div>
+                
+                
+                </div>
+                
+
+
+
+
                 </div>
               </div>
             </div>

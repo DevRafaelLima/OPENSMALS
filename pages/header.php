@@ -9,7 +9,7 @@ $estrategias = $estrategiaDao->findAllAtivas();
     <div class="container-fluid">
         <div class="header">
             <div class="logo">
-                <img src="assets/img/huge.png" alt="OpenSMALs">
+                <img src="assets/img/logo-horizontal.png" alt="OpenSMALs">
             </div>
             <div class="menu">
                 <ul>
